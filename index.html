@@ -50,10 +50,12 @@
         font: 14pt/2.0em Georgia;
         list-style: none;
         float: left;
-        width: 50%;
+        width: 33.25%;
         height: 40px;
         text-align: center;
         background: rgba(169,225,245,0.80);
+    } a li:nth-child(2n+1) {
+        border-left: 1px solid white;
     } a li {
         color: black;
     } a {
@@ -74,7 +76,7 @@
     } tr:nth-child(1) {
         background: lightblue;
     } h2 {
-        font: bold 14pt/1.4em Georgia, serif;
+        font: bold 18pt/1.4em Georgia, serif;
         text-align: center;
     } pre {
         font: 12pt/1.0em monospace;
@@ -91,12 +93,13 @@
         <ul>
             <li>Home</li>
             <a href="video.html"><li>Balloon Federation of America</li></a>
+            <a href="flexbox.html"><li>Flexbox Demo</li></a>
         </ul>
         <h1>Hot Air Ballooning</h1>
         <p style="padding-bottom: 176px;"><img class="float-left" src="andre.jpg" />
             According to Wikipedia, the first balloon flight carrying passengers was by brothers Joseph-Michel and Jacques-Etienne Montgolfier in Annonay, France, in 1873. Since then many have enjoyed sightseeing from the quiet, nearly wind-free heights afforded by hot air ballooning. (Banner photo by Daniela Cuevas and small photo by Andre Frueh, both on Unsplash.)</p>
         <h2>Colophon</h2>
-        <p>This index page and the linked video page (&ldquo;Balloon Federation of America,&rdquo; link above) show 4 types of links (table below) and how to place a video on a web page.</p>
+        <p>This index page shows 4 types of links (table below). The linked video page (&ldquo;Balloon Federation of America,&rdquo; above) shows an example of how to place a video on a web page. The &ldquo;Flexbox Demo&rdquo; link is to a page with interactive animations of the &ldquo;Align&rdquo; and &ldquo;Justify&rdquo; styles for the flexible box layout.</p>
         <h2>Code for Video</h2>
         <pre style="margin-top: 24px;">&lt;video width="640" height="360" controls poster="poster-natgeo-balloons.jpg"&gt;</pre>
         <pre>&nbsp;&nbsp;&nbsp;&nbsp;source src="natgeo-balloons.mp4"&gt;</pre>
