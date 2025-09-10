@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flexible Box Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    } body {
+        background: aliceblue;
+    } h1 {
+        font: 36pt/1.4em Lobster;
+        text-align: center;
+        text-shadow: 2px 3px 6px lightgreen;
+        margin-top: 48px;
+    } p {
+        font: 14pt/1.4em Georgia;
+        width: 768px;
+        margin: 36px auto;
+    } ul {
+        width: 928px;
+        border-radius: 18px;
+        margin: 24px auto;
+        background: black;
+        display: flex;
+    } ul#menubar {
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+    } li {
+        list-style: none;
+        width: 125px;
+        height: 50px;
+        border-radius: 18px;
+        margin: 3px;
+        background: lightgreen;
+        font: bold 14pt/2.65em 'Roboto Condensed';
+        text-align: center;
+        cursor: pointer;
+    } li:hover {
+        background: rgba(204,255,204,1.00);
+    } ul#menubar2 {
+        height: 256px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 144px;
+    } img {
+        width: 256px;
+        display: block;
+        margin: 0 auto;
+        background: radial-gradient(white,transparent);
+    }
+</style>
+<script type="text/javascript">
+    function center() {
+        document.getElementById("menubar").style.justifyContent="center";
+    } function spaceEvenly() {
+        document.getElementById("menubar").style.justifyContent="space-evenly";
+    } function spaceAround() {
+        document.getElementById("menubar").style.justifyContent="space-around";
+    } function spaceBetween() {
+        document.getElementById("menubar").style.justifyContent="space-between";
+    } function flexStart() {
+        document.getElementById("menubar").style.justifyContent="flex-start";
+    } function flexEnd() {
+        document.getElementById("menubar").style.justifyContent="flex-end";
+    } function flexStart2() {
+        document.getElementById("menubar2").style.alignItems="flex-start";
+    } function center2() {
+        document.getElementById("menubar2").style.alignItems="center";
+    } function flexEnd2() {
+        document.getElementById("menubar2").style.alignItems="flex-end";
+    }
+</script>
+</head>
+
+<body>
+    <h1>Flexbox &ldquo;Justify&rdquo;  &amp; &ldquo;Align&rdquo; Settings</h1>
+    <img src="justify-align-diagram.svg" />
+    <p><b>Justify.</b> The first black &lt;ul&gt; tag below is set to &ldquo;display: flex;&rdquo; and &ldquo;justify-content: center;,&rdquo; which determines the horizontal alignment of the green &gt;li&lt; tags. Click the green tags to change the justify-content setting to the one displayed.</p>
+    <ul id="menubar">
+        <li onClick="center()">Center</li>
+        <li onClick="spaceEvenly()">Space Evenly</li>
+        <li onClick="spaceAround()">Space Around</li>
+        <li onClick="spaceBetween()">Space Between</li>
+        <li onClick="flexStart()">Flex Start</li>
+        <li onClick="flexEnd()">Flex End</li>
+    </ul>
+    <p><b>Align.</b> The second black &lt;ul&gt; tag below is set to &ldquo;display: flex;&rdquo; and &ldquo;align-items: center;,&rdquo; which determines the vertical position of the green list items. Click the green &lt;li&gt; tags to change the align-items setting to the one displayed.</p>
+    <ul id="menubar2">
+        <li onClick="center2()">Center</li>
+        <li onClick="flexStart2()">Flex Start</li>
+        <li onClick="flexEnd2()">Flex End</li>
+    </ul>
+</body>
+</html>
