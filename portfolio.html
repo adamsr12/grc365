@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    } @font-face {
+        font-family: Candara;
+        src: url("Candara.ttf");
+    } h1 {
+        font: 48pt/1.4em Satisfy;
+        text-align: center;
+        text-shadow: 1px 2px 3px rgba(0,176,173,1.00);
+        margin: 24px 0;
+    } h2 {
+        font: bold 18pt/1.4em Candara, serif;
+        text-align: center;
+        margin: 24px 0;
+    } p {
+        font: 14pt/1.4em Candara;
+        width: 768px;
+        margin: 24px auto;
+    } #textbox {
+        width: 1024px;
+        height: 512px;
+        margin: 0 auto;
+        background: whitesmoke;
+        box-shadow: 2px 3px 6px gainsboro;
+        border: 1px solid gainsboro;
+        display: flex;
+        justify-content: center;
+    } figure {
+        margin: 24px;
+    } img, .zoom {
+        width: 200px;
+        height: 200px;
+        border: 1px solid gray;
+        box-shadow: 2px 3px 6px gray;
+        transition: transform 0.5s;
+    } figcaption {
+        font: 12pt/1.4em Candara;
+        margin-top: 3px;
+    } .zoom {
+        background: url("thumb-tulip.jpg");
+        background-size: 100%;
+        background-position: center;
+    } img:hover {
+        transform: scale(1.03);
+        transition: transform 0.5s;
+    } .zoom:hover {
+        background-size: 105%;
+        transition: background-size 0.5s;
+    } li {
+        width: 175px;
+        height: 50px;
+        background: lightgray;
+        border-radius: 12px;
+        list-style: none;
+        font: 14pt/2.6em Candara;
+        text-align: center; 
+        margin: 24px auto;
+    } a {
+        color: black;
+        text-decoration: none;
+    }
+</style>
+</head>
+
+<body>
+    <h1>Portfolio</h1>
+    <a href="index.html"><li>Home</li>
+    </a>
+    <div id="textbox">
+        <!-- Leaves photo -->
+        <figure>
+            <a href="leaves.jpg">
+            <img src="thumb-leaves.jpg" />
+            </a>
+            <figcaption>
+            Photo of aspen leaves in fall
+            </figcaption>
+        </figure>
+        <figure>
+            <a href="tulip.jpg">
+            <div class="zoom"></div>
+            </a>
+            <figcaption>
+            Photo of a pink tulip in spring
+            </figcaption>
+        </figure>
+    </div>
+    <h2>Colophon</h2>
+    <p>This portfolio page design uses 200&times;200px thumbnails linked to higher-res versions so readers can click and see a larger photo. The gray box is set to display: flex, justify-content: center, and align-items: flex-start. When more thumbnails are added, they arrange themselves automatically on the page.</p>
+    <p style="margin-bottom: 72px;">The thumbnails include two different &ldquo;hover&rdquo; effects. The yellow leaf thumnail expands 3% on hover, while the tulip expands 5% inside the frame. Additional effects can be created with the &ldquo;filter&rdquo; style, including blur, opacity, saturation, and others.</p>
+</body>
+</html>
