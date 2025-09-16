@@ -58,12 +58,15 @@
         text-decoration: none;
     } a li:hover {
         background: rgba(169,225,245,0.50);
-    } #arrow {
+    } .arrow {
         width: 75px;
         height: 75px;
-        margin-left: 24px;
+        margin: 24px 0 0 24px;
+    } .arrow:hover {
+        background: lightgreen;
+        transition: background 0.5s;
     } video {
-        margin: 64px auto 36px auto;
+        margin: 54px auto 36px auto;
         display: block;
         box-shadow: 2px 3px 6px dimgray;
     } .icon {
@@ -71,9 +74,17 @@
         height: 96px;
         border: none;
         box-shadow: none;
-        padding-right: 96px;
+        margin-right: 96px;
+    } .icon:hover {
+        background: lightgreen;
+        transition: background 0.5s;
     } table {
         width: 1024px;
+    } table p {
+        margin: -10px 0 0 0;
+        font: italic 12pt/1.4em Candara;
+        width: 512px;
+        padding-right: 64px;
     }
 </style>
 </head>
@@ -100,14 +111,14 @@
         <tr>
             <td style="width: 512px;">
              <a href="#banner">
-             <img id="arrow" src="arrow.png" />
+             <img class="arrow" id="arrow" src="arrow.png" />
              </a>
             </td>
             <td style="width: 512px; text-align: right;">
                <a href="https://unlv.zoom.us/rec/share/X9pKqeK8HcCjSIllIWTXl8BlDZ3HWWYYoXIJ4j8iROdluZAsevGRItyg_E8V5tx3.kCsf8omRrlbJlcKh?pwd=DFjXB1OuekJyau79YAAAIAAAACi7kMlqCvkvWdUQGkNF4fC-M27rrfx6jp7t1A2UHEJps4mc7WooB1ZCai3rJPvMXzAwMDAwNA" target="_blank">
                <img class="icon" src="icon-video.png" />
                </a>
-               <p style="margin: -10px 0 0 0; font-style: italic; width: 512px; padding-right: 36px;">Week 2 (9/3) Zoom Video</p>
+               <p>Week 2 (9/3) Zoom Video</p>
             </td>
         </tr>
         </table>        
