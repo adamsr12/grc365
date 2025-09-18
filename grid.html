@@ -54,6 +54,13 @@
         transition: opacity 0.5s;
     } figcaption {
         font: 12pt/1.4em Candara;
+    } ul {
+        width: 362px;
+        height: 50px;
+        margin: 0 auto;
+        display: grid;
+        grid-template: auto / auto auto;
+        justify-content: space-between;
     } li {
         width: 175px;
         height: 50px;
@@ -62,15 +69,13 @@
         list-style: none;
         font: 14pt/2.6em Candara;
         text-align: center; 
-        margin: 24px auto;
     } a {
-        grid-area: 3/2;
         color: black;
         text-decoration: none;
     } li:hover {
         background: rgba(169,225,245,0.80);
         transition: background 0.5s;
-
+    }
 </style>
 </head>
 
@@ -116,15 +121,20 @@
     </figure>
     </div>
     <h2>Colophon</h2>
-    <p>This portfolio was constructed by applying a 2-row by 3-column grid layout to a hidden &lt;div&gt; called &ldquo;picturebox&rdquo; (dashed line) that was set to the grid layout (display: grid;). The grid layout arranges items in a specified number of rows and columns, as defined by the &ldquo;grid-template&rdquo; style. The CSS used is as follows:</p>
+    <p>This portfolio was constructed by applying a 2-row by 3-column grid layout to a hidden &lt;div&gt; called &ldquo;picturebox&rdquo; (dashed line) that was set to the grid layout (display: grid;). The grid layout arranges items in a specified number of rows and columns, as defined by the &ldquo;grid-template&rdquo; style. (For more details, see the Grid Handout linked below.) The CSS used is as follows:</p>
     <pre>
         display: grid;
-        grid-template: repeat(2,225px) / repeat(3,250px);
+        grid-template: repeat(2,250px) / repeat(3,250px);
         justify-content: center;
     </pre>
+    <ul>
     <a href="https://adamsr12.github.io/grc365">
         <li>Home</li>
     </a>
+    <a href="https://adamsr12.github.io/grc365/grid-p2.html">
+        <li>Grid Handout</li>
+    </a>
+    </ul>
     </div>
 </body>
 </html>
