@@ -1,0 +1,93 @@
+@charset "UTF-8";
+* {margin: 0; padding: 0;}
+  @font-face {
+    font-family: Candara;
+    src: url(Candara.ttf);
+} body {
+    background: whitesmoke; 
+} #page {
+    width: 928px;
+    height: 2024px;
+    background: white;
+    margin: 24px auto;
+    border: 1px solid gray;
+    box-shadow: 2px 3px 6px gray;
+    z-index: 0;
+} header {
+    width: 928px;
+    margin: 0 auto;
+} header img {
+    width: 100%;
+} header h1 {
+    font: 48pt/1.4em 'Dancing Script';
+    text-align: center;
+    margin-top: 24px;
+    text-shadow: 2px 3px 6px goldenrod;
+} h2 {
+    font: 24pt/1.4em Candara;
+    text-align: center;
+    margin: 42px 0 18px 0;
+} p {
+    font: 14pt/1.4em Candara;
+    width: 768px;
+    margin: 6px auto;
+} pre {
+    font: 14pt/1.4em monospace;
+    width: 768px;
+    margin: 0 auto;
+} main {
+    width: 768px;
+    height: 768px;
+    border: 1px dashed gray;
+    margin: 24px auto;
+    display: grid;
+    grid-template: repeat(3,auto) / repeat(2,auto);
+    gap: 3px;
+} img:nth-child(5) {
+    grid-area: 3/1/4/3;
+    width: 768px;
+} .thumbnail-container {
+    text-align: left;
+    position: relative;
+    z-index: 1;
+} .thumbnail {
+    width: 256px;
+    position: absolute;
+    cursor: pointer;
+    transition: filter 0.2s;
+} .thumbnail:hover {
+    filter: drop-shadow(2px 3px 6px gray);
+    transition: filter 0.2s;
+} .icon {
+    width: 96px;
+    height: 96px;
+    display: block;
+    margin: 36px auto 0 auto;
+    border: none;
+    box-shadow: none;
+} .icon:hover {
+    transform: none;
+    background: lightgreen;
+    transition: background 0.5s;
+} ul {
+    width: 560px;
+    height: 50px;
+    display: grid;
+    grid-template: auto / auto auto auto;
+    justify-content: space-evenly;
+    margin: 24px auto;
+} li {
+    width: 175px;
+    height: 50px;
+    background: lightgray;
+    border-radius: 12px;
+    list-style: none;
+    font: 14pt/2.6em Candara;
+    text-align: center;
+} a {
+    color: black;
+    text-decoration: none;
+} li:hover {
+    background: rgba(169,225,245,0.80);
+    transition: background 0.5s;
+}

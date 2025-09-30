@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Grid Layout Demo</title>
+</head>
+
+<body>
+    <div id="page">
+    <header>
+        <img src="daniela.jpg" />
+        <h1>Hot Air Ballooning</h1>
+    <ul>
+        <a href="https://adamsr12.github.io/grc365">
+        <li>Home</li>
+        </a>
+        <a href="https://adamsr12.github.io/grc365/grid.html">
+        <li>Grid Portfolio</li>
+        </a>
+        <a href="https://adamsr12.github.io/grc365/grid-p2.html" target="_blank">
+        <li>Guide to Grid</li>
+        </a>
+    </ul>
+
+    </header>
+
+    <main>
+        <img src="1-2balloonsH.jpg" />
+        <img src="2-1balloonH.jpg" />
+        <img src="3-multiballoonH.jpg" />
+        <img src="4_1balloonH.jpg" />
+        <img src="5_1balloonHa.jpg" />
+    </main>
+    <h2>Colophon</h2>
+    <p>This demo of the grid layout uses a 3-row by 2-column 768px square to hold 5 photos, each sized to have a uniform, 256px (&frac13; of 768) height. (Thanks to Emani Floyd </p>
+    <p>CSS styles for &lt;main&gt; tag:</p>
+    <pre>
+    display: grid;
+    grid-template: repeat(3,auto) / repeat(2,auto);
+    </pre>
+    <p>Style for 5th photo (horizontal):</p>
+    <pre>
+    grid-area: 3/1/4/3;
+    </pre>
+    <p>The other photos fall into place automatically and don't need a grid-area specification.</p>
+    <a href="https://unlv.zoom.us/rec/share/JWgsi_AAdCPf1nGtUlwMUq3QQIfYT5WbplwrlvA3coN9M0T8LXPFUoO2omRkOBo9.ioXf_Gw4vm2nVvQ-?pwd=DMXMQqp8ZrnUTotl1gAAIAAAAAoEZfDn1u8jiyGhRvMvC2-DNcHmvOFHSSJmFOrZr66Mav8eCMpqJrtmLpGHyPAH-jAwMDAwNA" target="_blank">
+    <img class="icon" src="icon-video.png" />
+    </a>
+    <p style="text-align: center; font-style: italic; margin: 0 auto 48px auto;">Week 6 (9/29) Zoom Video</p>
+    </div>
+</body>
+</html>
