@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hot Air Ballooning</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    @font-face {
+        font-family: Georgia;
+        src: url("Georgia.ttf");
+    } body {
+        background: whitesmoke;
+        font-family: Roboto, sans-serif;
+    } #page {
+        width: 928px;
+        height: auto;
+        background: white;
+        border: 1px solid dimgray;
+        box-shadow: 2px 3px 6px gray;
+        margin: 0 auto;
+    } main {
+        width: 80%;
+        height: auto;
+        margin: 36px auto;
+    } header img {
+        width: 100%;
+        margin-bottom: 24px;
+    } header h1 {
+        font: 48pt/1.4em 'Dancing Script';
+        text-align: center;
+        margin-top: 24px;
+        text-shadow: 2px 3px 6px goldenrod;
+    } li {
+        width: 20%;
+        height: 35px;
+        border-radius: 6px;
+        list-style: none;
+        text-align: center;
+        font: 14pt/1.8em Roboto, sans-serif;
+        background: rgba(125,147,151,0.50);
+        margin: 0 auto;
+        display: block;
+    } a li {
+        color: black;
+    } a li:hover {
+        background: lightgray;
+    } a {
+        text-decoration: none;
+    } form {
+        background: lightyellow;
+        padding: 24px;
+        border: 1px solid goldenrod;
+    } .form-group {
+        margin-bottom: 15px;
+    } label {
+        display: inline;
+        margin-bottom: 5px;
+        font-weight: bold;
+    } input[type="text"], input[type="email"], select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: Roboto, sans-serif;
+        accent-color: red;
+    } .radio-group, .checkbox-group {
+        margin: 10px 0;
+    } .radio-option, .checkbox-option {
+        margin: 5px 0;
+    } input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    } input[type="submit"]:hover {
+        background-color: #45a049;
+    } footer {
+        width: 80%;
+        height: auto;
+        min-height: 100px;
+        margin: 0 auto 48px auto;
+    } footer p {
+        font: 14pt/1.4em Georgia, serif;
+    } footer h2 {
+        font: bold 14pt/1.4em Georgia, serif;
+        text-align: center;
+    }
+</style>
+<script language="JavaScript">
+    function toggle(source) {
+        checkboxes = document.getElementsByName('system');
+        for(var checkbox in checkboxes)
+        checkboxes[checkbox].checked = source.checked;
+    }
+</script>
+</head>
+
+<body>
+    <div id="page">
+        <header>
+            <img src="daniela.jpg" />
+                <a href="index.html"><li>Home</li>
+                </a>
+            <h1>AI Contact Form</h1>
+        </header>
+        <main>
+        <form action="https://formsubmit.co/richard.adams@unlv.edu" method="POST">
+        <h2>Service Inquiry Form</h2>
+
+        <!-- Text Fields -->
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- Radio Buttons for Services -->
+        <div class="form-group">
+            <label>Service Interested In:</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" id="design" name="service" value="design" required>
+                    <label for="design">Design Services</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="consulting" name="service" value="consulting">
+                    <label for="consulting">Consulting</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="ux" name="service" value="ux">
+                    <label for="ux">User Experience Design</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="other" name="service" value="other">
+                    <label for="other">Other Services</label>
+                </div>
+            </div>
+        </div>
+        <!-- Checkboxes for Operating Systems -->
+        <div class="form-group">
+            <label>Computer Operating System:</label>
+            <div class="checkbox-group">
+                <div class="checkbox-option">
+                    <input type="checkbox" id="macos" name="operatingSystem" value="macos">
+                    <label for="macos">MacOS</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="windows" name="operatingSystem" value="windows">
+                    <label for="windows">Windows</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="unix" name="operatingSystem" value="unix">
+                    <label for="unix">UNIX</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown Menu for Timeframe -->
+        <div class="form-group">
+            <label for="timeframe">Timeframe for Service:</label>
+            <select id="timeframe" name="timeframe" required>
+                <option value="">Please select a timeframe</option>
+                <option value="this-month">This Month</option>
+                <option value="this-quarter">This Quarter</option>
+                <option value="this-year">This Year</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    </main>
+<footer>
+    <h2>Colophon</h2>
+    <p>This contact form was written by Chinese AI chat platform DeepSeek. The prompt was:<br/> Write an HTML form that includes (1) text fields for the reader’s first name, last name, and email address; (2) four radio buttons for the user to the service in which they are interested, including (a) design services, (b) consulting, or (c) user experience design; (3) three checkboxes for readers to check if their computer operating system is (a) MacOS, (b) Windows, or (c) UNIX; a dropdown menu to select their timeframe for service, including (a) this month, (b) this quarter, or (c) this year; and a Submit button.</p>
+</footer>
+</div>
+</body>
+</html>
