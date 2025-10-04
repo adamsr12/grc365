@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Zoom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+      h1 {
+        font: 48pt/1.4em 'Dancing Script';
+        text-align: center;
+        text-shadow: 1px 2px 2px rgba(253,200,0,1.00);
+     } figcaption {
+        font: italic 14pt/1.4em Georgia, serif;
+        text-align: center;
+        margin-bottom: 48px;
+     } p {
+        font: 14pt/1.4em Georgia, serif;
+         width: 600px;
+         margin: 24px auto;
+    } li {
+        width: 20%;
+        height: 35px;
+        border-radius: 6px;
+        list-style: none;
+        text-align: center;
+        font: 14pt/1.8em Roboto, sans-serif;
+        background: rgba(125,147,151,0.50);
+        margin: 0 auto;
+        display: block;
+    } a li {
+        color: black;
+    } a li:hover {
+        background: lightgray;
+    } a {
+        text-decoration: none;
+
+     } .image-container {
+        width: 800px;
+        margin: 96px auto 12px auto;
+        display: flex;
+        justify-content: center;
+    } .image-container img {
+        width: 250px;
+        height: auto;
+        margin: 10px;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    } .zoomed {
+        position: relative;
+        z-index: 1000;
+        transform: scale(4);
+        box-shadow: 2px 3px 6px gray;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click-to-Enlarge Image Gallery</h1>
+    <a href="index.html">
+        <li>Home</li>
+    </a>
+  <div class="image-container">
+    <img src="image1.jpg" alt="Image 1">
+    <img src="image2.jpg" alt="Image 2">
+    <img src="image3.jpg" alt="Image 3">
+  </div>
+  <figcaption>Click an image to enlarge; click again to shrink.</figcaption>
+  <p>This image gallery contains a short JavaScript program writen by ChatGPT that enlarges a thumbail by 400% when clicked. You can see and copy the program with the browser's Web Inspector.</p>
+  <p>Prompt for the script was: Write a JavaScript program for an image gallery of small thumbnails so that, when the user clicks on an image is clicked, it will enlarge 400%; and when the user clicks off of the image, it will reduce to its original size.</p>
+  <script>
+    const images = document.querySelectorAll('.image-container img');
+    let zoomedImage = null;
+
+    images.forEach(img => {
+      img.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevents the body click from firing
+        // If already zoomed, do nothing
+        if (zoomedImage && zoomedImage !== img) {
+          zoomedImage.classList.remove('zoomed');
+        }
+
+        if (img.classList.contains('zoomed')) {
+          img.classList.remove('zoomed');
+          zoomedImage = null;
+        } else {
+          img.classList.add('zoomed');
+          zoomedImage = img;
+        }
+      });
+    });
+
+    // Click outside to reset zoom
+    document.body.addEventListener('click', () => {
+      if (zoomedImage) {
+        zoomedImage.classList.remove('zoomed');
+        zoomedImage = null;
+      }
+    });
+  </script>
+</body>
+</html>
