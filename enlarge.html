@@ -64,8 +64,9 @@
     <img src="image3.jpg" alt="Image 3">
   </div>
   <figcaption>Click an image to enlarge; click again to shrink.</figcaption>
-  <p>This image gallery contains a short JavaScript program writen by ChatGPT that enlarges a thumbail by 400% when clicked. You can see and copy the program with the browser's Web Inspector.</p>
-  <p>Prompt for the script was: Write a JavaScript program for an image gallery of small thumbnails so that, when the user clicks on an image is clicked, it will enlarge 400%; and when the user clicks off of the image, it will reduce to its original size.</p>
+  <p>This image gallery contains a short JavaScript program written by ChatGPT that enlarges a thumbail by 400% when clicked. You can see and copy the program with the browser's Web Inspector.</p>
+  <p>Prompt for the script was: Write a JavaScript program for an image gallery of small thumbnails so that, when the user clicks on an image, it will enlarge 400%; and when the user clicks off of the image, it will reduce to its original size.</p>
+  <p>For the program to work, the images need to be in a &lt;div&gt; of class "image-container," and the size increase needs to be specified in a class "zoomed."</p>
   <script>
     const images = document.querySelectorAll('.image-container img');
     let zoomedImage = null;
