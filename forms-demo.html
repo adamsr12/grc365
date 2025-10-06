@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style>
+    @font-face {
+        font-family: Candara;
+        src: url("Candara.ttf");
+    } h1 {
+        text-align: center;
+        font-weight: normal;
+    } form {
+        width: 600px;
+        min-height: 600px;
+        padding: 24px;
+        background: gold;
+        margin: 36px auto;
+        border: 1px solid goldenrod;
+        box-shadow: 2px 3px 6px goldenrod;
+        border-radius: 18px;
+        font: 14pt/1.2em Candara;
+    } input {
+        margin-bottom: 6px;
+    } input[type=text] {
+        width: 100%;
+    } input[type=submit] {
+        width: 125px;
+        height: 40px;
+        margin: 24px auto 0 auto;
+        display: block;
+        background: lightgreen;
+        border-radius: 6px;
+    } fieldset {
+        margin-top: 18px;
+    } #personal input, #submit {
+        width: 100%;
+        height: 24px;
+        margin-bottom: 12px;
+    } p {
+        font: 14pt/1.4em Candara;
+        width: 600px;
+        margin: 8px auto;
+    } ul {
+        width: 560px;
+        height: 50px;
+        display: grid;
+        grid-template: auto / auto auto auto;
+        justify-content: space-evenly;
+        margin: 36px auto;
+    } li {
+        width: 175px;
+        height: 50px;
+        background: lightgray;
+        border-radius: 12px;
+        list-style: none;
+        font: 14pt/2.6em Candara;
+        text-align: center; 
+    } a {
+        color: black;
+        text-decoration: none;
+    } li:hover {
+        background: rgba(169,225,245,0.80);
+        transition: background 0.5s;
+    }
+</style>
+<script language="JavaScript">
+    function toggle(source) {
+        checkboxes = document.getElementsByName('os');
+        for(var checkbox in checkboxes)
+        checkboxes[checkbox].checked = source.checked;
+    }
+</script>
+</head>
+
+<body>
+    <form action="https://formsubmit.co/richard.adams@unlv.edu" method="post">
+    <h1>Contact Us</h1>
+    <label for="fname">First name</label><br/>
+    <input type="text" id="fname" value="First name" /><br/>
+    <label for="lname">Last name</label><br/>
+    <input type="text" id="lname" value="Last name" /><br/>
+
+    <fieldset>
+    <legend>Reason for contacting us (check one)</legend>
+    <input type="radio" name="services" id="design" value="Design" />
+    <label for="design">Design services</label><br/>
+    <input type="radio" name="services" id="consulting" value="Design" />
+    <label for="consulting">Consulting</label><br/>
+    <input type="radio" name="services" id="UXD" value="User experience design" />
+    <label for="UXD">User experience design</label><br/>
+    <input type="radio" name="services" id="other" value="Other" />
+    <label for="UXD">Other</label>
+    </fieldset>
+        
+    <fieldset>
+    <legend>Operating system (check all that apply)</legend>
+    <input type="checkbox" name="os" id="all" value="" onClick="toggle(this)" />
+    <label for="all">Check/uncheck all</label><br/>
+    <input type="checkbox" name="os" id="macos" value="MacOS" />
+    <label for="macos">Macintosh</label><br/>
+    <input type="checkbox" name="os" id="windows" value="Windows" />
+    <label for="macos">Windows</label><br/>
+    <input type="checkbox" name="os" id="unix" value="UNIX" />
+    <label for="unix">UNIX</label>
+    </fieldset>
+    <fieldset>
+    <legend>Time frame</legend>
+    <select>
+        <option value="">When do you want to start working with us?</option>
+        <option value="month">This month</option>
+        <option value="quarter">This quarter</option>
+        <option value="year">This year</option> <option value="not sure">Not sure</option>
+    </select>
+    </fieldset>
+    <fieldset>
+    <legend>Message</legend>
+    <textarea rows="6" cols="70" value="message"></textarea>
+    </fieldset>
+    <input type="submit" value="Submit Form" />
+    </form>
+    <p>Sample form built in class. You can see the code using your browser's Web Inspector.</p>
+    <p>The checkbox section includes a 5-line JavaScript program connected to the "Check/uncheck all" box that checks or unchecks all the boxes.</p>
+        <ul>
+        <a href="https://adamsr12.github.io/grc365">
+        <li>Home</li>
+        </a>
+        <a href="https://adamsr12.github.io/grc365/form-deepseek.html">
+        <li>AI-built Form</li>
+        </a>
+    </ul>
+
+</body>
+</html>

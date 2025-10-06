@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Index Page</title>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <style>
     * {
         margin: 0;
@@ -45,17 +45,16 @@
         box-shadow: 2px 3px 6px darkgray;
     } ul {
         width: 100%;
-        margin-top: -4px;
+        margin-top: -2px;
         display: grid;
-        grid-template: auto/repeat(6,auto);
+        gap: 2px;
+        grid-template: repeat(2,auto)/repeat(4,auto);
     } li {
-        font: 14pt/2.0em Georgia;
+        font: 14pt/2.0em 'Roboto Condensed';
         list-style: none;
         height: 40px;
         text-align: center;
         background: rgba(169,225,245,0.80);
-    } a li:nth-child(2n+1) {
-        border-left: 1px solid white;
     } a li {
         color: black;
     } a {
@@ -90,7 +89,6 @@
         background: lightgreen;
         transition: background 0.5s;
     }
-
 </style>
 </head>
 
@@ -99,12 +97,14 @@
         <img id="banner" src="daniela.jpg" />
         <ul>
             <li>Home</li>
-            <a href="video.html"><li>Video &amp; Links Demo</li></a>
+            <a href="video.html"><li>Video/Links Demo</li></a>
             <a href="flexbox.html">
             <li>Flexbox Demo</li></a>
             <a href="portfolio.html"><li>Portfolio Demo</li></a>
             <a href="table.html"><li>Table Demo</li></a>
             <a href="grid-demo.html"><li>Grid Demo</li></a>
+            <a href="forms-demo.html"><li>Forms Demo</li></a>
+            <a href="type-demo.html"><li style="background: lightgray;">Type Demo</li></a>
         </ul>
         <h1>Hot Air Ballooning</h1>
         <p style="padding-bottom: 104px;"><img class="float-left" src="andre.jpg" />
