@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tutorial 8 | Type and Standards</title>
+<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+<link rel="manifest" href="site.webmanifest" />
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+<style>
+    * {margin: 0; padding: 0;}
+    @font-face {
+        font-family: Candara;
+        src: url("Candara.ttf");
+    } body {
+        background: aliceblue;
+    } #textbox {
+        width: 928px;
+        height: auto;
+        min-height: 1248px;
+        margin: 0 auto 72px auto;
+        background: white;
+        border: 1px solid gray;
+    } h1 {
+        font: 42pt/1.4em Satisfy;
+        text-align: center;
+        margin: 36px 0 24px 0;
+        text-shadow: 1px 2px 3px orange;
+    } h2 {
+        font: bold 18pt/1.4em Candara;
+        text-align: left;
+        width: 768px;
+        margin: 12px auto 0 auto;
+    } p {
+        font: 14pt/1.4em Candara;
+        width: 768px;
+        margin: 12px auto;
+    } pre {
+        font: 12pt/1.4em monospace;
+        width: 768px;
+        margin: -12px auto;
+    } details {
+        font: 14pt/1.4em Candara;
+        width: 534px;
+        margin: 0 auto;
+        background: azure;
+        padding: 6px;
+    } #textbox a {
+        color: crimson;
+        text-decoration: none;
+        font-weight: bold;
+    } img {
+        width: 50px;
+        height: auto;
+        display: block;
+        margin: 0 auto 36px auto;
+    } img:hover {
+        opacity: 0.67;
+        transition: opacity 0.5s;
+    } figcaption {
+        font: 12pt/1.4em Candara;
+    } ul {
+        width: 550px;
+        height: 50px;
+        margin: 36px auto;
+        display: grid;
+        grid-template: auto / repeat(3,auto);
+        justify-content: space-evenly;
+    } li {
+        width: 175px;
+        height: 50px;
+        background: lightgray;
+        border-radius: 12px;
+        list-style: none;
+        font: 14pt/2.6em Candara;
+        text-align: center; 
+    } ul a li {
+        color: black;
+        text-decoration: none;
+    } li:hover {
+        background: rgba(169,225,245,0.80);
+        transition: background 0.5s;
+    }
+</style>
+</head>
+
+<body>
+    <h1>Typography and Web Standards</h1>
+    <div id="textbox">
+    
+    <h2 style="margin-top: 54px">Origin of the Web</h2>
+    <p>The World Wide Web is attributed to computer scientist <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Sir Timothy Berners-Lee</a>, who at the time worked for the European Organization for Atomic Research (CERN). He was looking for a way for visiting scientists to share research results. Sir Timothy was knighted by Queen Elizabeth in 2004.</p>
+    <p>The Web is standardized by the World Wide Web Consortium (<a href="https://w3c.org" target="_blank">W3C.org</a>), which publishes standards for HTML, CSS, and other components.</p>
+    <h2>Fonts</h2>
+    <p>Not all users may have the font(s) on their computers that you want to use. Solution: give the font(s) to the readers by (1) linking to the font file with the <a href="https://www.w3schools.com/cssref/atrule_font-face.php" target="_blank">@font-face rule</a>, or (2) linking to the font on <a href="https://fonts.google.com" target="_blank">Google Fonts</a> or a similar free fonts web site.</p>
+    <h2>Meta Elements</h2>
+    <p><a href="https://www.w3schools.com/tags/tag_meta.asp" target="_blank">Meta elements</a> go in the &lt;head&gt; and are important in search engine optimization, which is helping search engines like Google to find your site.</p>
+    <pre>
+  &lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="description" content="Free Web tutorials"&gt;
+  &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+  &lt;meta name="author" content="John Doe"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;/head&gt;
+  </pre>
+  <h2>Page Structure</h2>
+  <p>Standardized page structure includes tags for &lt;header&gt;, &lt;main&gt;, and &lt;footer&gt;, along with other useful tags including &lt;sidebar&gt;, &lt;aside&gt;, and &lt;details&gt;. Example of details and its accompanying &lt;summary&gt; tag:</p>
+
+  <details>
+  <summary>Who is Alice in Wonderland? (Details example)</summary>
+  According to Wikipedia, <i>Alice in Wonderland</i>, or simply <i>Alice</i>, is a Disney media franchise, commencing in 1951 with the theatrical release of the animated film <i>Alice in Wonderland</i>. The film is an adaptation of the books by Lewis Carroll, the 1865 novel <i>Alice's Adventures in Wonderland</i> and its 1871 sequel <i>Through the Looking-Glass</i>, which featured his character Alice.</details>
+  <h2>Favicons</h2>
+  <p>A <a href="https://www.w3schools.com/html/html_favicon.asp" target="_blank">favicon</a> is a small image that appears at the left of browser tabs. Favicons are a nifty feature that can be important for a client’s brand identity.</p>
+  <p>To make a favicon, start with a PNG file, upload it to a favicon site like <a href="https://realfavicongenerator.net" target="_blank">RealFaviconGenerator.net</a>, and place the resulting code into the &lt;head&gt; of your document.</p>
+  <img src="squares-icon.png" />
+  <h2>Variable-Width Pages</h2>
+  <p>Variable-width pages showcase images when they are the primary feature, e.g., <a href="https://www.cnn.com/interactive/2024/08/world/horses-untamed-spirits-cnnphotos/" target="_blank">CNN’s feature article</a> on photographer Drew Doggett. Two types of variable-width pages are those where the image is more important than the text and those where both images and text are important. Below are links to two such examples.</p>
+    <ul>
+    <a href="https://adamsr12.github.io/grc365">
+        <li>Home</li>
+    </a>
+    <a href="https://adamsr12.github.io/grc365/variable-width-photo.html">
+        <li>Photo Page</li>
+    </a>
+    <a href="https://adamsr12.github.io/grc365/variable-width-photo-and-text.html">
+        <li>Photo &amp; Text Page</li>
+    </a>
+    </ul>
+    </div>
+</body>
+</html>
