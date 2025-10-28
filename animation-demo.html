@@ -1,7 +1,7 @@
 <!doctype html>
 <html><head>
 <meta charset="UTF-8">
-<title>Untitled Document</title>
+<title>Animation Demo</title>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 <style>
     @font-face {
@@ -11,6 +11,7 @@
     h1 {
         font: 48pt/1.4em 'Dancing Script';
         text-align: center;
+        text-shadow: 1px 2px 3px rgba(255,87,0,0.50);
     } h2 {
         font: bold 18pt/1.4em Georgia;
     } p {
@@ -90,20 +91,22 @@
 </div>
 <div id="text">
 <h2>Parts of an Animation</h2>
-<p><b>@keyframes rule.</b> A statement that details the change points, marked in %, in the animation. E.g.</p>
+<p><b>@keyframes rule.</b> A statement that details the change points (keyframes), marked in %, in the animation. The @keyframes rule must be named so it can be applied to one or more tags:</p>
 <pre>
     @keyframes letsgo {
          0% {left: 0;}
          100% {left: 120vw;}
     }
 </pre>
-<p><b>Animation styles</b> attached to the tag you want to move</p>
+<p><b>Animation styles</b> attached to the tag you want to move. To do the animation,  browsers must know a minimum of the animation name and the animation duration.</p>
 <pre>
     #motorcycle {
         animation-name: letsgo;
         animation-duration: 10s;
         animation-fill-mode: forwards;
         animation-timing-function: ease-in;
+    } #motorcycle { /* shorthand animation style combining all the above */
+        animation: letsgo 10s forwards ease-in;
     }
 </pre>
 <h2>JavaScript</h2>
@@ -134,7 +137,7 @@
     // Rewind: reset the animation by removing and re-adding it
     motorcycle.style.animation = 'none';
     // Force reflow to restart animation
-    void box.offsetWidth;
+    void motorcycle.offsetWidth;
     motorcycle.style.animation = 'letsgo 4s linear infinite';
     motorcycle.style.animationPlayState = 'paused'; // stay paused after rewind
   };
