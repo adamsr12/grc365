@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>    
+<script   src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="  crossorigin="anonymous"></script>
+<style>
+    @font-face {
+        font-family: Georgia;
+        src: url("Georgia.ttf");
+    } @font-face {
+        font-family: Candara;
+        src: url("Candara.ttf");
+    } h1 {
+        font: bold 48pt/1.4em 'Dancing Script';
+        text-align: center;
+        text-shadow: 2px 3px 6px rgba(127,71,222,0.67);
+    } p {
+        font: 14pt/1.4em Georgia, serif;
+        width: 70ch;
+        margin: 36px auto;
+    } #polkadots {
+        width: 800px;
+        height: 600px;
+        border-radius: 12px;
+        margin: 0 auto;
+        background: url("polkadots-black.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    } #circle1, #circle2 {
+        width: 300px;
+        height: 300px;
+        background: rgba(255,255,255,0.25);
+        border-radius: 50%;
+        border: 2px solid dimgray;
+        box-shadow: 2px 3px 6px rgba(255,255,255,0.33);
+    } #circle1 {
+        backdrop-filter: blur(6px);
+    } #circle2 {
+        backdrop-filter: saturate(5);
+    } ul {
+        width: 386px;
+        padding: 0;
+        margin: 64px auto 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+    } li {
+        width: 175px;
+        height: 50px;
+        background: lightgray;
+        border-radius: 12px;
+        list-style: none;
+        font: 14pt/2.8em Candara;
+        text-align: center;
+    } a li {
+        color: black;
+    } a li:hover {
+        background: lightgray;
+    } a {
+        text-decoration: none;
+    }
+</style>
+</head>
+
+<body>
+    <h1>jQuery Demo</h1>
+    <p>This demo uses jQuery’s “draggable” function to make the circles movable around the screen using the mouse. (Draggable requires both jQuery and the jQuery UI libraries.) In addition, the circles have the “backdrop-filter” style set to blur and saturate, respectively, which alter the appearance of the underlying polkadots.</p>
+    <div id="polkadots">
+        <div id="circle1"></div>
+        <div id="circle2"></div>
+    </div>
+    <ul>
+    <a href="javascript-demo.html"><li>Page 1</li>
+    </a>
+    </ul>
+
+<script>
+   $(function(){
+      $('#circle1, #circle2').draggable();
+   }); 
+</script>
+    
+</body>
+</html>
