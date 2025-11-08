@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tutorial 12 | Advanced Options</title>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+<style>
+    * {margin: 0; padding: 0;}
+    @font-face {
+        font-family: Candara;
+        src: url("Candara.ttf");
+    } body {
+        background: aliceblue;
+    } #textbox {
+        width: 928px;
+        height: auto;
+        min-height: 1248px;
+        margin: 0 auto 72px auto;
+        background: white;
+        border: 1px solid gray;
+    } h1 {
+        font: 42pt/1.4em Satisfy;
+        text-align: center;
+        margin: 36px 0 18px 0;
+        text-shadow: 1px 2px 3px orange;
+    } h2 {
+        font: bold 18pt/1.4em Candara;
+        text-align: left;
+        width: 768px;
+        margin: 12px auto 0 auto;
+    } p {
+        font: 14pt/1.4em Candara;
+        width: 768px;
+        margin: 10px auto;
+    } pre {
+        font: 12pt/1.4em monospace;
+        width: 768px;
+        margin: -6px auto;
+    } details {
+        font: 14pt/1.4em Candara;
+        width: 534px;
+        margin: 0 auto;
+        background: azure;
+        padding: 6px;
+    } #textbox a {
+        color: crimson;
+        text-decoration: none;
+        font-weight: bold;
+    } img {
+        width: 50px;
+        height: auto;
+        display: block;
+        margin: 0 auto 36px auto;
+    } img:hover {
+        opacity: 0.67;
+        transition: opacity 0.5s;
+    } figcaption {
+        font: 12pt/1.4em Candara;
+    } footer ul {
+        width: 400px;
+        height: 50px;
+        margin: 36px auto;
+        display: grid;
+        grid-template: auto / repeat(2,auto);
+        justify-content: space-evenly;
+    } footer ul li {
+        width: 175px;
+        height: 50px;
+        background: lightgray;
+        border-radius: 12px;
+        list-style: none;
+        font: 14pt/2.6em Candara;
+        text-align: center; 
+    } footer ul a li {
+        color: black;
+        text-decoration: none;
+    } footer ul 55li:hover {
+        background: rgba(169,225,245,0.80);
+        transition: background 0.5s;
+    } #bp {
+        padding-left: 96px;
+    } #bp li {
+        list-style: disc;
+        text-align: left;
+        width: auto;
+        height: auto;
+        background: none;
+        font: 14pt/1.4em Candara;
+        padding-left: -24px;
+    }
+</style>
+</head>
+
+<body>
+    <h1>Advanced Options</h1>
+    <div id="textbox">
+    <p style="margin: 48px auto -24px auto; font-style: italic;">This handout describes several advanced options that you can implement on your web site and/or with your knowledge of HTML/CSS. They each have a “wow factor” as not all web designers know how to work with them.</p>
+    <h2 style="margin-top: 54px">Google Analytics</h2>
+    <p><a href="https://analytics.google.com" target="_blank">Google Analytics</a> enables you to see how many people visited your web site, where they came from, how long they stayed, and what they clicked on while there. This information can be very valuable to marketers. The process works by Google’s creating a code snippet to place in the &lt;head&gt; of your document. The code snippet sends information to Google that you can see on the Analytics web site. See <a href="https://r3adams.github.io/grc420/analytics.html" target="_blank">Handout</a> on Google Analytics</p>
+    <h2>Search Engine Optimization (SEO)</h2>
+    <p>SEO is the process of placing information on your web site so that search engines will place it on page 1. The process works when “web crawlers” read information on web sites and determine a site’s relevance to a reader’s search criteria. Google recommends specific strategies in their “<a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank">SEO Starter Guide</a>.” An important part of an SEO strategy is to place &lt;meta&gt; tags in the &lt;head&gt; with extensive “keywords” and “descriptions.”</p>
+    <h2>MailChimp</h2>
+    <p><a href="https://mailchimp.com" target="_blank">MailChimp</a> and several other programs like Constant Contact enable you to send email “blasts” (campaigns) to lists of clients. The programs are a type of content management sytem similar to WordPress. They perform 3 functions:
+    <ul id="bp">
+    <li>Maintain databases of subscribers</li>
+    <li>Create subscription forms to enlist more subscribers</li>
+    <li>Create HTML-formatted emails to send to subscribers and to view on the web</li>
+    </ul>
+    </p>
+
+    <h2>eBooks</h2>
+    <p><img src="epub-logo.png" style="width: 124px; float: right; margin: 0 0 0 0;" />eBooks, or electronic books, are “encapsulated web pages” based on XHTML, the extensible hypertext markup language. They include standard and proprietary formats for displaying text and graphics, primarily on tablets. eBooks are best suited for text-heavy documents, such as novels and non-fiction business, psychology, self-help, and similar books with minimal graphics. Creative, tech-savvy designers can create eye-catching designs that include decorative fonts, drop-caps, typographic ornaments, sidebars, callouts, and other visually “interactive” features. The best way to create standard ePub documents is with InDesign. All graphics must be “inline,” which means pasted into the text using the i-Beam tool. A website called <a href="https://pressbooks.com" target="_blank"> Pressbooks</a> offers an online publishing platform for HTML-formatted eBooks that can be output to the web, to ePub, and to PDF for screen or print. See handout, “<a href="https://r3adams.github.io/grc420/epub.html" target="_blank">ePub from InDesign</a>.”</p>
+
+    <h2>Social Media</h2>
+    <p>Social media platforms like Facebook, Instagram, X, SnapChat, Pinterest, LinkedIn, TikTok, YouTube, and others are a great way for your clients to update  customers on the latest products and services. According to Toronto social media consultant Brent Stirling, the purpose of social media is to drive readers to your client’s website. Before working with clients, Brent does a website audit, in which he checks for a clear and understandable interface, legible and high-quality photos, descriptive text, and other features. Brent advocates posting before readers’ down time, for which he coined the term “Burrito Principle.”</p>
+    <footer>
+    <ul>
+    <a href="https://adamsr12.github.io/grc365">
+        <li>Home</li>
+    </a>
+    <a href="#" target="_blank">
+        <li>Zoom Video</li>
+    </a>
+    </ul>
+    </footer>
+    </div>
+</body>
+</html>
