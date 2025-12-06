@@ -15,7 +15,7 @@
         background: whitesmoke;
     } #page {
         width: 1024px;
-        height: 1375px;
+        height: auto;
         background: white;
         border: 1px solid darkgray;
         box-shadow: 2px 3px 6px darkgray;
@@ -79,12 +79,30 @@
         background: lightgreen;
         transition: background 0.5s;
     } table {
-        width: 1024px;
+        font: 12pt/1.4em Roboto;
+        border-collapse: collapse;
+        margin: 24px auto;
+        border: 2px solid lightblue;
+    } tr:nth-child(2) {
+        font-style: italic;
+    } tr:nth-child(odd) {
+        background: gainsboro;
+    } td, th {
+        padding: 3px 6px;
+    } tr:nth-child(1) {
+        background: lightblue;
     } table p {
         margin: -10px 0 0 0;
         font: italic 12pt/1.4em Georgia;
         width: 512px;
         padding-right: 64px;
+    } h2 {
+        font: bold 18pt/1.4em Georgia, serif;
+        text-align: center;
+    } pre {
+        font: 12pt/1.0em monospace;
+        width: 768px;
+        margin: 6px auto;
     }
 </style>
 </head>
@@ -107,8 +125,42 @@
         <video width="640" height="360" controls poster="poster-natgeo-balloons.jpg">
             <source src="natgeo-balloons.mp4">
         </video>
+        <h2>Code for Video</h2>
+        <pre style="margin-top: 24px;">&lt;video width="640" height="360" controls poster="poster-natgeo-balloons.jpg"&gt;</pre>
+        <pre>&nbsp;&nbsp;&nbsp;&nbsp;source src="natgeo-balloons.mp4"&gt;</pre>
+        <pre>&lt;/video&gt;</pre>
+      <table>
+      <tr>
+      <th colspan="3">Links Shown on This Page</th>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td>destination</td>
+        <td>description</td>
+      </tr>
+      <tr>
+        <td>local/relative</td>
+        <td>link to another page on your server</td>
+        <td>“Home” button</td>
+      </tr>
+      <tr>
+        <td>global/absolute</td>
+        <td>link to a page on another server</td>
+        <td>“BFA” (link will get broken if owner changes the name)</td>
+      </tr>
+      <tr>
+        <td>anchor</td>
+        <td>link to an ID for another location in a page</td>
+        <td>“Back to top” arrow</td>
+      </tr>
+      <tr>
+        <td>email</td>
+        <td>link to open an email to someone</td>
+        <td>“Email the BFA”&mdash;can include subject and initial content</td>
+      </tr>
+    </table>
     <table>
-        <tr>
+        <tr style="background: white;">
             <td style="width: 512px;">
              <a href="#banner">
              <img class="arrow" id="arrow" src="arrow.png" />
