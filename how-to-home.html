@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    } body {
+        background: whitesmoke;
+    } #page {
+        width: 1024px;
+        height: auto;
+        background: white;
+        margin: 0 auto;
+        padding: 1px;
+        border: 1px solid darkgray;
+        box-shadow: 2px 3px 6px darkgray;
+    } h1 {
+        font: 48pt/1.4em 'Dancing Script';
+        text-align: center;
+        margin: 36pt 0 0 0;
+        color: brown;
+        text-shadow: 2px 3px 6px darkgray;
+    } img {
+        width: 512px;
+        display: block;
+        border-collapse: collapse;
+        margin: 48px auto;
+        border: 1px solid darkgray;
+        box-shadow: 2px 3px 6px darkgray;
+    } table {
+        font: 12pt/1.4em monospace;
+        width: 768px;
+        margin: 48px auto;
+        border: 1px solid darkgray;
+        // padding: 12px;
+    } tr:nth-child(odd) {
+        background: whitesmoke;
+    } td, th {
+        padding: 0 24px;
+    }
+</style>
+</head>
+
+<body>
+    <div id="page">
+        <h1>Basic Page &bull; How to</h1>
+        <table>
+            <tr>
+                <th colspan="3">HTML Tags in the Page</th>
+            </tr>
+            <tr>
+                <td>img</td>
+                <td>image</td>
+                <td>non-closing tag, place slash at end</td>
+            </tr>
+            <tr>
+                <td>h1</td>
+                <td>heading 1</td>
+                <td>one of 6 headings, h1–h6, bold and larger</td>
+            </tr>
+            <tr>
+                <td>p</td>
+                <td>paragraph</td>
+                <td>p and h1 have automatic paragraph returns ¶ after (called “block-level” elements)</td>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td>identification of one tag</td>
+                <td>can only be used once on a page, selected with #</td>
+            </tr>
+            <tr>
+                <td>class</td>
+                <td>identification of multiple tags</td>
+                <td>selected with .classname</td>
+            </tr>
+        </table>
+
+        <img src="Fig01_Diagram_BasicPage.jpg" />
+        <table>
+            <tr>
+                <th>Styles Used in the Page</th>
+            </tr>
+            <tr>
+                <td>#banner {<br/>
+                    &nbsp;&nbsp;width: 100%;<br/>
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>p {<br/>
+                    &nbsp;&nbsp;font: 14pt/1.4em Georgia, serif;<br/>
+                    &nbsp;&nbsp;width: 768px;<br/>
+                    &nbsp;&nbsp;margin: 0 auto;<br/>
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>.float-left {<br/>
+                    &nbsp;&nbsp;width: 368px;<br/>
+                    &nbsp;&nbsp;float: left;<br/>
+                    }<br/>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th colspan="2">Fonts</th>
+            </tr>
+            <tr>
+                <td>Dancing Script</td>
+                <td><a href="https://fonts.google.com" target="_blank">Google Font</a> linked with tag on fonts.google.com</td>
+            </tr>
+            <tr>
+                <td>Georgia</td>
+                <td>Microsoft screen font, loaded with <a href="https://www.w3schools.com/cssref/atrule_font-face.php" target="_blank">@font-face</a> rule and placed on server</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="font: 10pt/1.4em Georgia;">Note: To avoid having your font default to Times on readers' computers, either select a Google Font or link your font file with the @font-face rule and remember to upload the font file to the server.</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
