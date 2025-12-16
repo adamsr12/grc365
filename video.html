@@ -82,7 +82,6 @@
         font: 12pt/1.4em Roboto;
         border-collapse: collapse;
         margin: 24px auto;
-        border: 2px solid lightblue;
     } tr:nth-child(2) {
         font-style: italic;
     } tr:nth-child(odd) {
@@ -103,6 +102,16 @@
         font: 12pt/1.0em monospace;
         width: 768px;
         margin: 6px auto;
+    } #icons {
+        width: 860px;
+        margin: 48px auto;
+        display: flex;
+        justify-content: space-between;
+    } figure {
+        width: 100px;
+    } figcaption {
+        font: 12pt/1.8em Georgia;
+        text-align: center;
     }
 </style>
 </head>
@@ -119,61 +128,22 @@
         <p><img class="float-left" src="bausenhart.jpeg" />
             <i>This tutorial showed how to place a video in a web page and how to create four types of links (relative/local, absolute/global, anchor, and email).</i><br/><br/>
             <!-- Absolute or Global Link -->
-            The <a href="https://bfa.net" target="_blank"><b>BFA</b></a> is a 501(c)3 non-profit association dedicated to the advancement of the sport and science of lighter-than-air aviation, both hot air and gas balloons. Founded in 1961, membership in the BFA is open to anyone who shares a fascination with Lighter Than Air flight.</p>
+            The <a href="https://bfa.net" target="_blank"><b>Balloon Federation of America</b></a> is a 501(c)3 non-profit association dedicated to the advancement of the sport and science of lighter-than-air aviation, both hot air and gas balloons. Founded in 1961, membership in the BFA is open to anyone who shares a fascination with Lighter Than Air flight.</p>
             <!-- Email link -->
             <a href="mailto:info@bfa.net?subject=Web Site Inquiry"><p>Email the BFA</p></a>
         <video width="640" height="360" controls poster="poster-natgeo-balloons.jpg">
             <source src="natgeo-balloons.mp4">
         </video>
-        <h2>Code for Video</h2>
-        <pre style="margin-top: 24px;">&lt;video width="640" height="360" controls poster="poster-natgeo-balloons.jpg"&gt;</pre>
-        <pre>&nbsp;&nbsp;&nbsp;&nbsp;source src="natgeo-balloons.mp4"&gt;</pre>
-        <pre>&lt;/video&gt;</pre>
-      <table>
-      <tr>
-      <th colspan="3">Links Shown on This Page</th>
-      </tr>
-      <tr>
-        <td>type</td>
-        <td>destination</td>
-        <td>description</td>
-      </tr>
-      <tr>
-        <td>local/relative</td>
-        <td>link to another page on your server</td>
-        <td>“Home” button</td>
-      </tr>
-      <tr>
-        <td>global/absolute</td>
-        <td>link to a page on another server</td>
-        <td>“BFA” (link will get broken if owner changes the name)</td>
-      </tr>
-      <tr>
-        <td>anchor</td>
-        <td>link to an ID for another location in a page</td>
-        <td>“Back to top” arrow</td>
-      </tr>
-      <tr>
-        <td>email</td>
-        <td>link to open an email to someone</td>
-        <td>“Email the BFA”&mdash;can include subject and initial content</td>
-      </tr>
-    </table>
-    <table>
-        <tr style="background: white;">
-            <td style="width: 512px;">
-             <a href="#banner">
-             <img class="arrow" id="arrow" src="arrow.png" />
-             </a>
-            </td>
-            <td style="width: 512px; text-align: right;">
-               <a href="https://unlv.zoom.us/rec/share/X9pKqeK8HcCjSIllIWTXl8BlDZ3HWWYYoXIJ4j8iROdluZAsevGRItyg_E8V5tx3.kCsf8omRrlbJlcKh?pwd=DFjXB1OuekJyau79YAAAIAAAACi7kMlqCvkvWdUQGkNF4fC-M27rrfx6jp7t1A2UHEJps4mc7WooB1ZCai3rJPvMXzAwMDAwNA" target="_blank">
-               <img class="icon" src="icon-video.png" />
-               </a>
-               <p>Week 2 (9/3) Zoom Video</p>
-            </td>
-        </tr>
-        </table>        
+    <div id="icons">
+        <a href="#banner">
+        <img class="arrow" id="arrow" src="arrow.png" />
+        </a>
+        <figure>
+        <a href="how-to-video.html" target="_blank">
+        <img class="icon" src="i-icon.png" /></a>
+        <figcaption>How-to Page</figcaption>
+        </figure>
+        </div>        
     </div>
 </body>
 </html>

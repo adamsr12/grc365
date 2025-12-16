@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>How to &bull; Home Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    } @font-face {
+        font-family: Georgia;
+        src: url("Georgia.ttf");
+    } body {
+        background: whitesmoke;
+    } #page {
+        width: 1024px;
+        height: 1228px;
+        background: white;
+        margin: 0 auto;
+        padding: 1px;
+        border: 1px solid darkgray;
+        box-shadow: 2px 3px 6px darkgray;
+    } h1 {
+        font: 48pt/1.4em 'Dancing Script';
+        text-align: center;
+        margin: 36pt 0 0 0;
+        color: brown;
+        text-shadow: 2px 3px 6px darkgray;
+    } table {
+        font: 12pt/1.4em Roboto, sans-serif;
+        width: 928px;
+        margin: 48px auto;
+        border: 1px solid darkgray;
+    } tr:nth-child(odd) {
+        background: whitesmoke;
+    } td, th {
+        padding: 3px 12px;
+    } .arrow {
+        width: 75px;
+        height: 75px;
+        margin: 24px 0 0 24px;
+    } .arrow:hover {
+        background: lightgreen;
+        transition: background 0.5s;
+    } .icon {
+        width: 96px;
+        height: 96px;
+    } .icon:hover {
+        background: lightgreen;
+        transition: background 0.5s;
+    } figure {
+        width: 100px;
+        margin: 124px auto 0 auto;
+    } figcaption {
+        font: 12pt/1.4em Georgia;
+        text-align: center;
+    } h2 {
+        font: bold 18pt/1.4em Georgia, serif;
+        text-align: center;
+        margin: 48px 0 24px 0;
+    } pre {
+        font: 13pt/1.2em monospace;
+        width: 768px;
+        margin: 6px auto;
+    }
+</style>
+</head>
+
+<body>
+    <div id="page">
+      <h1>How to &bull; Video &amp; Links</h1>
+      <h2>Code for Video</h2>
+        <pre style="margin-top: 24px;">&lt;video width="640" height="360" controls poster="poster-natgeo-balloons.jpg"&gt;</pre>
+        <pre>&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="natgeo-balloons.mp4"&gt;</pre>
+        <pre>&lt;/video&gt;</pre>
+      <table>
+      <tr>
+      <th colspan="4">Links Shown on the Video Page</th>
+      </tr>
+      <tr style="font-style: italic;">
+        <td>type</td>
+        <td>destination</td>
+        <td>description</td>
+        <td>example</td>
+      </tr>
+      <tr>
+        <td>local/relative</td>
+        <td>link to another page on your server</td>
+        <td>“Home” button</td>
+        <td>&lt;a href="index.html"&gt;</td>
+      </tr>
+      <tr>
+        <td>global/absolute</td>
+        <td>link to a page on another server</td>
+        <td>“BFA” (link will get broken if owner changes the name)</td>
+        <td>&lt;a href="https://bfa.net"&gt;</td>
+      </tr>
+      <tr>
+        <td>anchor</td>
+        <td>link to an ID for another location in a page</td>
+        <td>“Back to top” arrow<br/>
+          (Must have ID at destination)</td>
+        <td>&lt;a href="#banner"&gt;</td>
+      </tr>
+      <tr>
+        <td>email</td>
+        <td>link to open an email to someone</td>
+        <td>“Email the BFA”<br/>(can include subject and initial content)</td>
+        <td>&lt;a href="mailto:info@bfa.net?subject=Web Page Inquiry"&gt;</td>
+      </tr>
+    </table>
+    <figure>
+       <a href="https://unlv.zoom.us/rec/share/X9pKqeK8HcCjSIllIWTXl8BlDZ3HWWYYoXIJ4j8iROdluZAsevGRItyg_E8V5tx3.kCsf8omRrlbJlcKh?pwd=DFjXB1OuekJyau79YAAAIAAAACi7kMlqCvkvWdUQGkNF4fC-M27rrfx6jp7t1A2UHEJps4mc7WooB1ZCai3rJPvMXzAwMDAwNA" target="_blank">
+       <img class="icon" src="icon-video.png" />
+       </a>
+       <figcaption>Week 2 (9/3) Zoom Video
+       </figcaption>
+       </figure>
+    </div>
+</body>
+</html>
