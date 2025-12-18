@@ -51,12 +51,44 @@
         display: block;
         margin: 0 auto;
         background: radial-gradient(white,transparent);
-    } a {
+    } a li {
         width: 125px;
         text-decoration: none;
         color: black;
         margin: 0 auto 72px auto;
         display: block;
+    } #container {
+        width: 768px;
+        height: 576px;
+        background: black;
+        border-radius: 12px;
+        margin: 0 auto;
+        padding-top: 12px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 12px;
+    } .step {
+        display: none;
+        width: 150px;
+        height: 150px;
+        margin: 12px;
+        border-radius: 12px;
+        background-color: lightgreen;
+        font: bold 18pt/6em 'Roboto Condensed', sans-serif;
+        text-align: center;
+    } button {
+        width: 150px;
+        height: 50px;
+        background: lightgreen;
+        margin: 24px auto;
+        display: block;
+        border: none;
+        border-radius: 18px;
+        font: bold 14pt/1.2em 'Roboto Condensed';
+    } button:hover {
+        box-shadow: 2px 3px 6px darkgray;
     }
 </style>
 <script type="text/javascript">
@@ -83,7 +115,24 @@
 </head>
 
 <body>
-    <h1>Flexbox &ldquo;Justify&rdquo;  &amp; &ldquo;Align&rdquo; Settings</h1>
+    <h1>Flexible Box Layout &bull; How to</h1>
+    <p>The <a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank">flexible box layout</a> is a newer style for page layout on the web. When a &lt;div&gt; or other container is set to “display: flex;” items inside will arrange themselves according to subsidiary styles like “justify,” “align,” “wrap,” and others. To see how the flexible box layout works, click the “Add Another Box” button below.</p>
+    <button id="next">Add Another Box</button>
+    <div id="container">
+    <div class="step">Div 1</div>
+    <div class="step">Div 2</div>
+    <div class="step">Div 3</div>
+    <div class="step">Div 4</div>
+    <div class="step">Div 5</div>
+    <div class="step">Div 6</div>
+    <div class="step">Div 7</div>
+    <div class="step">Div 8</div>
+    <div class="step">Div 9</div>
+    <div class="step">Div 10</div>
+    <div class="step">Div 11</div>
+    <div class="step">Div 12</div>
+    </div>
+    <p>Two important subsidiary styles for the flexible box layout are “justify,” referring to the horizontal layout, and “align,” for the vertical layout. You can explore these in the interactive demos below.</p>
     <img src="justify-align-diagram.svg" />
     <p><b>Justify.</b> The first black &lt;ul&gt; tag below is set to &ldquo;display: flex;&rdquo; and &ldquo;justify-content: center;,&rdquo; which determines the horizontal alignment of the green &lt;li&gt; tags, which are styled to look like buttons. Click the green tags to change the justify-content setting to the one displayed.</p>
     <ul id="menubar">
@@ -100,6 +149,24 @@
         <li onClick="flexStart2()">Flex Start</li>
         <li onClick="flexEnd2()">Flex End</li>
     </ul>
-    <a href="index.html"><li>Home</li></a>
+    <a href="index.html" style="text-decoration: none;"><li>Home</li></a>
+<script>
+  const divs = document.querySelectorAll('.step');
+  const button = document.getElementById('next');
+  let currentIndex = 0;
+
+  // Show the first div initially
+  divs[currentIndex].style.display = 'block';
+
+  button.addEventListener('click', () => {
+
+    // Move to next div
+    currentIndex = (currentIndex + 1) % divs.length;
+
+    // Show next div
+    divs[currentIndex].style.display = 'block';
+  });
+</script>
+
 </body>
 </html>
