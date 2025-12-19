@@ -9,6 +9,9 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+    } @font-face {
+        font-family: Candara;
+        src: url("Candara.ttf");
     } body {
         background: whitesmoke;
     } #page {
@@ -42,7 +45,22 @@
         background: whitesmoke;
     } td, th {
         padding: 3px 12px;
+    } button {
+        width: 150px;
+        height: 50px;
+        background: gainsboro;
+        border: none;
+        display: block;
+        margin: 24px auto;
+        border-radius: 18px;
+        font: 14pt/1.4em Candara;
+    } button:hover {
+        background: rgba(169,225,245,0.80);
+        transition: background 0.5s;
+    } a {
+        text-decoration: none;
     }
+
 </style>
 </head>
 
@@ -126,6 +144,9 @@
                 <td colspan="2" style="font: 12pt/1.4em Georgia; padding-top: 6px;">Note: To avoid having your font default to Times on readers' computers, either (1) select a Google Font, (2) link your font file with the @font-face rule and remember to upload the font file to the server, and/or (3) include a chain of preferred fonts, such as "font-family: Georgia, serif;".</td>
             </tr>
         </table>
+        <a href="index.html">
+        <button>Home</button>
+        </a>
     </div>
 </body>
 </html>
