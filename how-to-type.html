@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>How to &bull; Type</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    } @font-face {
+        font-family: Georgia;
+        src: url("Georgia.ttf");
+    } @font-face {
+        font-family: Candara;
+        src: url("Candara.ttf");
+    } @font-face {
+        font-family: 'Bergamot Ornaments';
+        src: url("BergamotOrnaments.ttf");
+    } h1 {
+        font: 48pt/1.4em 'Dancing Script';
+        text-align: center;
+        margin: 36pt 0 36px 0;
+        color: brown;
+        text-shadow: 2px 3px 6px darkgray;
+    } p, ol {
+        font: 14pt/1.4em Georgia, serif;
+        width: 684px;
+        margin: 12px auto;
+    } li {
+        list-style-position: inside;
+    } #sidebar {
+        width: 768px;
+        margin: 36px auto;
+        padding: 24px;
+        background: aliceblue;
+        border: 1px solid lightgray;
+    } pre {
+        font: 12pt/1.4em monospace;
+        width: 624px;
+        margin: 0 auto;
+    } .ornament {
+        font: 48pt/1.4em 'Bergamot Ornaments';
+        text-align: center;
+    } button {
+        width: 150px;
+        height: 50px;
+        background: gainsboro;
+        border: none;
+        display: block;
+        margin: 24px auto;
+        border-radius: 18px;
+        font: 14pt/1.4em Candara;
+    } button:hover {
+        background: rgba(169,225,245,0.80);
+        transition: background 0.5s;
+    } a {
+        text-decoration: none;
+    }
+</style>
+</head>
+
+<body>
+    <h1>How to &bull; Type</h1>
+    <p>If you want to use a particular font in your page design, you should give the font to readers using one of two methods:
+    <ol>
+        <li>Link the font file to your page using the @font-face rule in your CSS style sheet. (Remember to upload the font file to the server.)</li>
+        <li>Link to a Google Font with the supplied link.</li>
+    </ol>
+    </p>
+    <div id="sidebar">
+    <p style="font-family: Candara, sans-serif;">Candara is a humanist sans-serif typeface designed by Gary Munch as part of Microsoft’s ClearType Font Collection. It features open letterforms, soft curves, and a relatively large x-height, which make it highly readable on screens, especially at small sizes. Candara has a clean, modern appearance that works well for user interfaces, presentations, and body text in digital documents.
+    <pre>
+    <b>CSS for Candara from a Font File</b>
+    &lt;style&gt;
+        @font-face {
+            font-family: Candara;
+            src: url("Candara.ttf");
+        } p {
+            font: 14pt/1.4em Candara, sans-serif;
+        }
+    &lt;/style&gt;
+    </pre>
+    </p>
+    <p class="ornament">p</p>
+    <p style="font-family: Roboto, sans-serif;">Roboto is a modern sans-serif typeface designed by Christian Robertson for Google, originally created for the Android operating system. It combines geometric forms with friendly, open curves, giving it a clean appearance that reads well at many sizes. Roboto is highly versatile and widely used in web, mobile, and application interfaces due to its clarity and extensive family of weights and styles.
+    <pre>
+    <b>Link to Roboto on Google Fonts</b>
+    &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:
+    ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"&gt;
+    </pre>
+    </p>
+    </div>
+    <p>As a precaution, you should include a list of additional fonts (“font stack”) in which you would like to see your text displayed, in the event your first choice doesn't work for some reason. The font-stack should end in a generic specification, such as serif, sans-serif, monospace, cursive, or fantasy.
+    <pre>
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    </pre>
+    </p>
+    <a href="index.html">
+    <button>Home</button>
+    </a>
+</body>
+</html>

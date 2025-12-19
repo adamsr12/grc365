@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>How to &bull; Home Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    } @font-face {
+        font-family: Georgia;
+        src: url("Georgia.ttf");
+    } h1 {
+        font: 48pt/1.4em 'Dancing Script';
+        text-align: center;
+        margin: 36pt 0 36px 0;
+        color: brown;
+        text-shadow: 2px 3px 6px darkgray;
+    } p {
+        font: 14pt/1.4em Georgia, serif;
+        width: 768px;
+        margin: 12px auto;
+    } pre {
+        font: 13pt/1.4em monospace;
+        margin: 12px auto 12px auto;
+        width: 768px;
+    } figcaption {
+        font: 13pt/1.4em Candara, sans-serif;
+        width: 70ch;
+        margin: 12px auto;
+    } #sizes {
+        width: 1024px;
+        display: block;
+        margin: 0 auto;
+        border: 1px solid darkgray;
+        box-shadow: 2px 3px 6px darkgray;
+    } table {
+        font: 12pt/1.4em monospace;
+        width: 512px;
+        margin: 48px auto;
+        border: 1px solid darkgray;
+    } tr:nth-child(odd) {
+        background: whitesmoke;
+    } td, th {
+        padding: 3px 12px;
+        text-align: center;
+    } button {
+        width: 150px;
+        height: 50px;
+        background: gainsboro;
+        border: none;
+        display: block;
+        margin: 24px auto;
+        border-radius: 18px;
+        font: 14pt/1.4em Candara;
+    } button:hover {
+        background: rgba(169,225,245,0.80);
+        transition: background 0.5s;
+    } a {
+        text-decoration: none;
+    }
+</style>
+</head>
+
+<body>
+    <h1>How to &bull; Images</h1>
+    <p>Images should be sized appropriately for web pages. If you have a fixed-width page that's 1024px wide, a full-width image should be 1024px wide or, to give more leeway for enlargement, double that size at 2048px. Higher resolution will not increase quality but will increase download speed, which could be important to public WiFi users at malls, airports, on trains and planes, and other places that have limited bandwidth.</p>
+    <p style="margin-top: 12px;">As a general guideline, images for the web should not be more than 500K (0.5MB). For the montage below, the 1920px image was downloaded and resized to 1024px in Photoshop.</p>
+    <p>When linking images to your page, please do not use the “Browse” function of Dreamweaver. This will create a path to the image on your hard drive, which will not be accessible on the web. Rather, link to the image file itself. Example:
+    <pre>
+    &lt;img src="image.jpg" /&gt;
+    <b>not</b> &lt;img src="MacHD//Downloads/GRC365/Assignment2/image.jpg"&gt;
+    </pre>
+    </p>
+    <figure>
+    <img id="sizes" src="wong-sizes.jpg" />
+    <figcaption>This image by Samuel Wong on Unsplash is available in 4 resolutions shown in the labels. The montage has been resized to a maximum width of 1024px for a fixed-width page of the same size. The inset photos are intended to show the relative sizes of the other resolutions in comparison to that of the original.</figcaption>
+    </figure>
+    <table>
+        <tr>
+            <th colspan="2">Resolutions and File Sizes for the Balloon Image</th>
+        </tr>
+        <tr>
+            <th>resolution</th>
+            <th>file size</th>
+        </tr>
+        <tr>
+            <td>5472&times;3648</td>
+            <td>1.7 MB</td>
+        </tr>
+        <tr>
+            <td>2400&times;1600</td>
+            <td>291 K</td>
+        </tr>
+        <tr>
+            <td>1920&times;1280</td>
+            <td>194 K</td>
+        </tr>
+        <tr>
+            <td>640&times;426</td>
+            <td>37 K</td>
+        </tr>
+    </table>
+    <button>Home</button>
+</body>
+</html>
