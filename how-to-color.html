@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>How to &bull; Home Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    } @font-face {
+        font-family: Candara;
+        src: url("Candara.ttf");
+    } body {
+        background: whitesmoke;
+    } #page {
+        width: 1024px;
+        height: auto;
+        background: white;
+        margin: 0 auto;
+        padding: 1px;
+        border: 1px solid darkgray;
+        box-shadow: 2px 3px 6px darkgray;
+    } h1 {
+        font: 48pt/1.4em 'Dancing Script';
+        text-align: center;
+        margin: 36pt 0 0 0;
+        color: brown;
+        text-shadow: 2px 3px 6px darkgray;
+    } #color-bg {
+        width: 600px;
+        margin: 48px auto;
+        border: 1px solid darkgray;
+        display: grid;
+        grid-template: auto auto / auto auto;
+        gap: 12px;
+        align-items: center;
+        font: 14pt/1.4em Roboto, sans-serif;
+        text-align: center;
+        padding: 18px;
+    } #bg {
+        width: 100px;
+        height: 100px;
+        background: red;
+        justify-self: center;
+    } h2 {
+        font: 64pt/1.4em Roboto;
+        color: red;
+    } .descr {
+        font: 14pt/1.4em Candara;
+        width: 612px;
+        margin: 12px auto;
+    } img {
+        width: 512px;
+        display: block;
+        border-collapse: collapse;
+        margin: 48px auto;
+        border: 1px solid darkgray;
+        box-shadow: 2px 3px 6px darkgray;
+    } table {
+        border-collapse: collapse;
+        font: 12pt/1.4em Roboto;
+        width: 768px;
+        margin: 48px auto;
+        border: 1px solid darkgray;
+        // padding: 12px;
+    } tr:nth-child(2) {
+        font-style: italic;
+    } tr:nth-child(odd) {
+        background: whitesmoke;
+    } td, th {
+        padding: 3px 12px;
+    } button {
+        width: 150px;
+        height: 50px;
+        background: gainsboro;
+        border: none;
+        display: block;
+        margin: 24px auto;
+        border-radius: 18px;
+        font: 14pt/1.4em Candara;
+    } button:hover {
+        background: rgba(169,225,245,0.80);
+        transition: background 0.5s;
+    } a {
+        text-decoration: none;
+    }
+</style>
+</head>
+
+<body>
+    <div id="page">
+        <h1>How to &bull; Color</h1>
+        <p class="descr" style="margin-top: 36px;">Color on the web is specified with the “color” and “background” styles using named, rgb, rgba, or hexadecimal values, as described in the table below.</p>
+        <p class="descr">For class I recommend using the named, rgb, or rgba color systems because it’s easier for collaborators to identify the colors used.</p>
+        <p class="descr">The handout “<a href="https://r3adams.github.io/grc365/colorbars.html">Web Color Bars</a>” groups the named colors by neutral density (average RGB) and by CIE L* lightness values to facilitate selection. (<a href="https://en.wikipedia.org/wiki/CIELAB_color_space">CIE LAB</a> or L*a*b* is a mathematical model of human vision and is closer to visual appearance than neutral density.)</p>
+        <div id="color-bg">
+            <h2 id="color">Type</h2>
+            <div id="bg"></div>
+            <p>color: red;</p>
+            <p>background: red;</p>
+            <p>the “color” style is for type</p>
+            <p>the “background” style is like fill</p>
+        </div>
+        <table>
+            <tr>
+                <th colspan="4">Web Color Systems</th>
+            </tr>
+            <tr>
+                <td>system</td>
+                <td>specification</td>
+                <td>example</td>
+                <td>comment</td>
+            </tr>
+            <tr>
+                <td><a href="https://r3adams.github.io/grc365/demo_color_names.htm">named color</a></td>
+                <td>palette of 147 colors</td>
+                <td>color: red; background: red;</td>
+                <td>easy to identify colors</td>
+            </tr>
+            <tr>
+                <td>rgb</td>
+                <td>red, green, and blue; scale 0–255</td>
+                <td>rgb(255,0,0); = red</td>
+                <td>harder than named but easier than hex to identify colors</td>
+            </tr>
+            <tr>
+                <td>rgba</td>
+                <td>red, green, blue, and opacity (0–1.00)</td>
+                <td>rgba(255,0,0,0.50);<br/>
+                red with 50% opacity</td>
+                <td>opacity is useful for adjusting color and getting an exact look</td>
+            </tr>
+            <tr>
+                <td>hexadecimal</td>
+                <td>3 or 6 base-16 numbers</td>
+                <td>#ff0000 (6-digit) or #f00 (3-digit)</td>
+                <td>widely used but difficult to identify colors</td>
+            </tr>
+        </table>
+
+
+        <a href="index.html">
+        <button>Home</button>
+        </a>
+    </div>
+</body>
+</html>
