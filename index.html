@@ -74,8 +74,6 @@
         padding: 3px 6px;
     } tr:nth-child(1) {
         background: lightblue;
-    } td:nth-child(2) {
-       border-left: 2px solid lightgray;
     } h2 {
         font: bold 18pt/1.4em Georgia, serif;
         text-align: center;
@@ -106,7 +104,8 @@
     <div id="page">
         <img id="banner" src="daniela.jpg" />
         <ul>
-            <li>Home</li>
+            <li style="grid-area: 1/3/2/5;">Home</li>
+            <!--
             <a href="video.html"><li>Video/Links Demo</li></a>
             <a href="flexbox.html">
             <li>Flexbox Demo</li></a>
@@ -114,36 +113,19 @@
             <a href="table.html"><li>Table Demo</li></a>
             <a href="grid-demo.html"><li>Grid Demo</li></a>
             <a href="forms-demo.html"><li>Forms Demo</li></a>
-            <a href="type-demo.html"><li>Standards Demo</li></a>
+            <a href="type-demo.html"><li>Type Demo</li></a>
             <a href="animation-demo.html"><li>Animation Demo</li></a>
             <a href="javascript-demo.html"><li>JavaScript Demo</li></a>
             <a href="advanced-demo.html"><li>Advanced Demo</li></a>
             <a href="#"><li></li></a>
+            -->
         </ul>
         <h1>Hot Air Ballooning</h1>
         <p style="padding-bottom: 104px;"><img class="float-left" src="andre.jpg" />
         According to Wikipedia, the first balloon flight carrying passengers was by brothers Joseph-Michel and Jacques-Etienne Montgolfier in Annonay, France, in 1873. Since then many have enjoyed sightseeing from the quiet, nearly wind-free heights afforded by hot air ballooning. (Banner photo by Daniela Cuevas and small photo by Andre Frueh, both on Unsplash.)</p>
         <h2>Colophon</h2>
-        <p>This Home Page shows how to create a simple web page with HTML tags and CSS styles. It includes a banner image, menu of links, heading, paragraphs, and an image with text wrap. You can see the code using your browser’s Web Inspector (see table below).</p>
+        <p>This Home Page shows how to create a simple web page with HTML tags and CSS styles. It includes a banner image, menu of links, heading, paragraphs, and an image with text wrap. You can see the code using your browser’s Web Inspector (they all have one).</p>
         <p>The links below provide more detailed instructions on how to create the page, how to use type, and how to size images.</p>
-        <table>
-           <tr>
-              <th colspan="2">Browser Web Inspectors to See Code</th>
-           </tr>
-           <tr>
-              <td>Browser</td><td>Web Inspector</td>
-           </tr>
-           <tr>
-              <td>Safari</td><td>Safari &gt; Settings &gt; Advanced (check “Show Features for Web Developers")<br/>
-              Develop &gt; Show Web Inspector</td>
-           </tr>
-           <tr>
-              <td>Chrome</td><td>View &gt; Developer &gt; View Source</td>
-           </tr>
-           <tr>
-              <td>Firefox</td><td>Tools &gt; Browser Tools &gt; Page Source</td>
-           </tr>
-        </table>
         <div id="icons">
         <figure>
         <a href="how-to-home.html" target="_blank">
@@ -161,12 +143,6 @@
         <figcaption>How-to Images</figcaption>
         </figure>
 
-        <figure>
-        <a href="how-to-color.html" target="_blank">
-        <img class="icon" src="i-icon.png" /></a>
-        <figcaption>How-to Color</figcaption>
-        </figure>
-           
         <figure>
         <a href="https://unlv.zoom.us/rec/share/OQWrAuFfSNoKLPXB1hpQtJSGDYalFeOsMB7hW4bY07f9lEazWm_igScnpoPmnvsM.ZQ_SqwkkkK6pkWQX?pwd=DMhkEHPMTKCG1OmpTgAAIAAAACRSkYIPBR8jLIpJvkKzScl0ZBRaA5p_4bEqOMUs4GIxdqA0qz7m9rfAGic5AzVTBjAwMDAwNA" target="_blank">
         <img class="icon" src="icon-video.png" /></a>
