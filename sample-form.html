@@ -54,9 +54,9 @@
 <body>
     <form action="https://formsubmit.co/richard.adams@unlv.edu" method="post">
     <h1>Contact Us</h1>
-    <input type="text" /><br/>
+    <input type="text" name="First name" /><br/>
     <label>First name</label><br/>
-    <input type="text"><br/>
+    <input type="text" name="Last name"><br/>
     <label>Last name</label><br/>
     <fieldset>
     <legend>Reason for contacting us</legend>
@@ -73,26 +73,26 @@
     <legend>Operating system</legend>
     <input type="checkbox"  onClick="toggle(this)">
     <label>Check/uncheck all boxes</label><br/>
-    <input type="checkbox" name="foo">
+    <input type="checkbox" name="Mac OS">
     <label>Mac OS</label><br/>
-    <input type="checkbox" name="foo">
+    <input type="checkbox" name="Windows">
     <label>Windows</label><br/>
-    <input type="checkbox" name="foo">
+    <input type="checkbox" name="UNIX">
     <label>UNIX</label><br/>
-    <input type="checkbox" name="foo">
+    <input type="checkbox" name="Other">
     <label>Other</label>
     </fieldset>
     <fieldset>
-    <legend>Time frame</legend>
+    <legend name="Time frame">Time frame</legend>
     <select>
-        <option>This week</option>
-        <option>This month</option>
-        <option>This quarter</option>
-        <option>Not sure</option>
+        <option name="This week">This week</option>
+        <option name="This month">This month</option>
+        <option name="This quarter">This quarter</option>
+        <option name="Not sure">Not sure</option>
     </select>
     </fieldset>
     <label>Message</label><br/>
-    <textarea rows="5" cols="72">
+    <textarea rows="5" cols="72" name="Message">
     </textarea>
     <input type="submit" />
     </form>
