@@ -39,6 +39,8 @@
         border-radius: 6px;
         border: 1px solid dimgray;
         font: 14pt/1.4em Candara;
+    } textarea {
+        font: 14pt/1.4em Candara;
     }
 </style>
 <script language="JavaScript">
@@ -60,13 +62,13 @@
     <label>Last name</label><br/>
     <fieldset>
     <legend>Reason for contacting us</legend>
-    <input type="radio" name="service">
+    <input type="radio" name="Service">
     <label>Design service</label><br/>
-    <input type="radio" name="service">
+    <input type="radio" name="Consulting">
     <label>Design consulting</label><br/>
-    <input type="radio" name="service">
+    <input type="radio" name="UX-UI">
     <label>UX/UI Design</label><br/>
-    <input type="radio" name="service">
+    <input type="radio" name="Other">
     <label>Other</label>
     </fieldset>
     <fieldset>
@@ -92,7 +94,7 @@
     </select>
     </fieldset>
     <label>Message</label><br/>
-    <textarea rows="5" cols="72" name="Message">
+    <textarea rows="5" cols="60" name="Message">
     </textarea>
     <input type="submit" />
     </form>
