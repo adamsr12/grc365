@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Achilles and the Tortoise</title>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+<style>
+    @font-face {
+        font-family: Georgia;
+        src: url("Georgia.ttf");
+    } body {
+        // background: whitesmoke;
+    } header {
+        width: 768px;
+        margin: 24px auto;
+    } h1 {
+        font: 40pt/1.4em 'Kaushan Script';
+        text-align: center;
+        text-shadow: 1px 2px 3px lightgreen;
+        padding-top: 48px;
+    } p {
+        font: 15pt/1.5em Georgia;
+        width: 768px;
+        margin: 0 auto;
+    } .tortoise, .runner {
+        width: 100px;
+    } .tortoise {
+        position: relative;
+        top: 20px;
+        left: 240px;
+        animation-name: tortoise;
+        animation-duration: 10s;
+        animation-fill-mode: forwards;
+    } .runner {
+        position: relative;
+        top: 10px;
+        left: -30px;
+        animation-name: runner;
+        animation-duration: 10s;
+        animation-fill-mode: forwards;
+    } .go {
+        animation-play-state: paused;
+    } button {
+        display: block;
+        margin: 24px auto 48px auto;
+        background: lightgreen;
+        width: 100px;
+        height: 40px;
+        border-radius: 12px;
+        border: 1px solid dimgray;
+    } button:hover {
+        opacity: 0.80;
+    } span {
+        font-size: 3em;
+        line-height: 1.055em;
+        float: left;
+        margin: 0 3px -6px 0;
+        text-shadow: 1px 2px 3px lightgreen;        
+    } @keyframes runner {
+        0% {left: -30px;}
+        30% {left: 350px;}
+        50% {left: 350px;}
+        50% {left: 530px;}
+        75% {left: 530px;}
+        75% {left: 620px;}
+        100% {left: 620px;}
+    } @keyframes tortoise {
+        0% {left: 240px;}
+        30% {left: 430px;}
+        50% {left: 430px;}
+        50% {left: 530px;}
+        75% {left: 530px;}
+        75% {left: 580px;}
+        100% {left: 580px;}
+    }
+</style>
+<script>
+    function start() {
+    const items = document.getElementsByClassName('go');
+    for (let i = 0; i < items.length; i++) {
+    items[i].style.animationPlayState = 'running';
+    }};
+</script>
+</head>
+
+<body>
+    <header>
+        <h1>Paradox of Achilles and the Tortoise</h1>
+        <img class="runner go" src="runner.png" />
+        <img class="tortoise go" src="tortoise.png" />
+        <img style="width: 768px;" src="line.png" />
+    <button onclick="start();">Start</button>       </header>
+    <main>
+        <p><span>I</span>n the paradox of Achilles and the tortoise, proposed by ancient Greek mathematician Zeno (ca. 490–430 BC), Achilles is in a footrace with a tortoise. Achilles allows the tortoise a head start of 100 meters, for example. Suppose that each racer starts running at some constant speed, one faster than the other. After some finite time, Achilles will have run 100 meters, bringing him to the tortoise's starting point. During this time, the tortoise will have run a much shorter distance, say 2 meters. It will then take Achilles some further time to run that distance, by which time the tortoise will have advanced farther; and then more time still to reach this third point, while the tortoise moves ahead. Thus, whenever Achilles arrives somewhere the tortoise has been, he still has some distance to go before he can even reach the tortoise.</p>
+        <p style="font-size: 12pt; margin-top: 48px; font-style: italic;">Acknowlegments: Story courtesy of Wikipedia, images from pngtree.com, idea presented by Dr. Gene Herman</p>
+    </main>
+</body>
+</html>
