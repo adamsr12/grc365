@@ -40,14 +40,26 @@
         animation-fill-mode: forwards;
     } .go {
         animation-play-state: paused;
+    } #buttons {
+        width: 100%;
+        height: 100px;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
     } button {
-        display: block;
-        margin: 24px auto 48px auto;
-        background: lightgreen;
         width: 100px;
         height: 40px;
         border-radius: 12px;
         border: 1px solid dimgray;
+        font-size: 14pt;
+    } #start {
+        background: lightgreen;
+    } #pause {
+        background: orange;
+    } #reset {
+        background: lightblue;
     } button:hover {
         opacity: 0.80;
     } span {
@@ -80,6 +92,20 @@
     for (let i = 0; i < items.length; i++) {
     items[i].style.animationPlayState = 'running';
     }};
+    function pause() {
+    const items = document.getElementsByClassName('go');
+    for (let i = 0; i < items.length; i++) {
+    items[i].style.animationPlayState = 'paused';
+    }};
+    function reset() {
+    const items = document.getElementsByClassName('go');
+    for (let i = 0; i < items.length; i++) {
+    items[i].style.animation = 'none';   // remove animation
+    items[i].offsetHeight;               // force reflow (important!)
+    items[i].style.animation = '';       // restore animation
+    items[i].style.animationPlayState = 'paused'; // keep it at start
+  }
+}
 </script>
 </head>
 
@@ -89,7 +115,12 @@
         <img class="runner go" src="runner.png" />
         <img class="tortoise go" src="tortoise.png" />
         <img style="width: 768px;" src="line.png" />
-    <button onclick="start();">Start</button>       </header>
+    <div id="buttons">
+        <button id="start" onclick="start();">Start</button>
+        <button id="pause" onclick="pause();">Pause</button>
+        <button id="reset" onclick="reset();">Reset</button>
+    </div>
+    </header>
     <main>
         <p><span>I</span>n the paradox of Achilles and the tortoise, proposed by ancient Greek mathematician Zeno (ca. 490–430 BC), Achilles is in a footrace with a tortoise. Achilles allows the tortoise a head start of 100 meters, for example. Suppose that each racer starts running at some constant speed, one faster than the other. After some finite time, Achilles will have run 100 meters, bringing him to the tortoise's starting point. During this time, the tortoise will have run a much shorter distance, say 2 meters. It will then take Achilles some further time to run that distance, by which time the tortoise will have advanced farther; and then more time still to reach this third point, while the tortoise moves ahead. Thus, whenever Achilles arrives somewhere the tortoise has been, he still has some distance to go before he can even reach the tortoise.</p>
         <p style="font-size: 12pt; margin-top: 48px; font-style: italic;">Acknowlegments: Story courtesy of Wikipedia, images from pngtree.com, idea presented by Dr. Gene Herman</p>
