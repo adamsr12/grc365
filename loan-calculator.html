@@ -64,6 +64,25 @@
       margin-top: 15px;
       font-weight: bold;
       text-align: center;
+    } ul {
+        width: 386px;
+        padding: 0;
+        margin: 64px auto 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+    } li {
+        width: 175px;
+        height: 50px;
+        background: lightgray;
+        border-radius: 12px;
+        list-style: none;
+        font: 14pt/2.8em Candara;
+        text-align: center;    } a li {
+        color: black;
+    } a li:hover {
+        background: lightgray;
+    } a {
+        text-decoration: none;
     }
   </style>
 </head>
@@ -87,8 +106,13 @@
 
   <div class="result" id="result"></div>
 </div>
-<p>This loan calculator was written by ChatGPT. The prompt was, &ldquo;Write an HTML document with a JavaScript loan calculator in which the user can enter the amount (principle) of the loan ($), interest rate (%), and term of the loan (years), and the calculator will show the monthly payment ($).&rdquo;<br/><br/>To use the calculator, enter the amount of money you want to borrow in the Loan Amount, the interest rate, and the term of the loan, then press the &ldquo;Calculate&rdquo; button. The amount of the monthly payments will be shown below the button.</p>
+<p>This loan calculator was written by ChatGPT with the prompt, &ldquo;Write an HTML document with a JavaScript loan calculator in which the user can enter the amount (principle) of the loan ($), the interest rate (%), and term of the loan (years), and the calculator will show the monthly payment ($).&rdquo;<br/><br/>To use the calculator, enter the amount of money you want to borrow in the Loan Amount, the Interest Rate, and the Loan Term, then press the &ldquo;Calculate&rdquo; button. The amount of the monthly payments will be shown below the button.</p>
 </div>
+<ul style="margin-top: 72px;">
+    <a href="javascript-demo.html"><li>Page 1</li>
+    </a>
+</ul>
+
 <script>
   document.getElementById("loanForm").addEventListener("submit", function(e) {
     e.preventDefault();
