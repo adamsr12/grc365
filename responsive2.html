@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Responsive Design with Grid Layout</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<style>
+    @font-face {
+        font-family: Georgia;
+        src: url("Georgia.ttf");
+    } body {
+        background: whitesmoke;
+    } h1 {
+        font: 48pt/1.4em 'Dancing Script';
+        text-align: center;
+        text-shadow: 1px 2px 3px lightgreen;
+    } p {
+        font: 14pt/1.4em Georgia;
+        width: 768px;
+        max-width: 90%;
+        margin: 36px auto 18px auto;
+    } #textbox {
+        width: 928px;
+        max-width: 100%;
+        height: 928px;
+        background: white;
+        margin: 72px auto;
+        border: 1px solid dimgray;
+        display: grid;
+        grid-template: auto auto / auto auto;
+    } #textbox div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font: 72pt/1.4em Helvetica;
+    } div:nth-child(1) {
+        background: lightblue;
+    } div:nth-child(2) {
+        background: lightgreen;
+        grid-area: 1/2/3/3;
+    } div:nth-child(3) {
+        background: lavender;
+    } ul {
+        width: 386px;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+    } li {
+        width: 175px;
+        height: 50px;
+        background: lightgray;
+        border-radius: 12px;
+        list-style: none;
+        font: 14pt/2.8em Georgia;
+        text-align: center;
+    } a li {
+        color: black;
+    } a li:hover {
+        background: lightgray;
+    } a {
+        text-decoration: none;
+    } @media only screen and (max-width: 750px) {
+        #textbox {
+            width: 95vw;
+            height: 380vw;
+            grid-template: repeat(4,auto) / auto;
+        } div:nth-child(2) {
+            grid-area: 2/1/4/2;
+    }
+    }
+</style>
+</head>
+
+<body>
+    <h1>Responsive Grid</h1>
+    <ul>
+        <a href="responsive1.html"><li>Responsive Page</li>
+        </a>
+    </ul>
+    <p>This grid layout changes from a 2&times;2 row&times;column layout for desktop and laptop computer screens to a 4&times;1 row&times;column layout for cell phones less than 750px horizontal resolution.</p>
+    <div id="textbox">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

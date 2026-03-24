@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Responsive Design</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<style>
+    @font-face {
+        font-family: Georgia;
+        src: url("Georgia.ttf");
+    } body {
+        width: 1024px;
+        max-width: 95%;
+        margin: 0 auto;
+    } h1 {
+        font: 64pt/1.0em 'Dancing Script';
+        text-align: center;
+        color: rgba(0,85,187,1.00);
+        text-shadow: 1px 2px 3px orange;
+    } h2 {
+        font: bold 18pt/1.4em Georgia;
+        text-align: center;
+        margin: 36px 0 0 0;
+    } p {
+        font: 14pt/1.4em Georgia;
+    } img {
+        width: 386px;
+        float: left;
+        margin: 0 24px 12px 0;
+    } ul {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto 36px auto;
+    } li {
+        width: 175px;
+        height: 50px;
+        background: lightgray;
+        border-radius: 12px;
+        list-style: none;
+        font: 14pt/2.8em Georgia;
+        text-align: center;
+        margin: 0 auto;
+    } a li {
+        color: black;
+    } a li:hover {
+        background: lightgray;
+    } a {
+        text-decoration: none;
+
+    } @media only screen and (max-width: 750px) {
+        img {
+            float: none;
+            width: 100%;
+        } p {
+            font: 18pt/1.6em Georgia;
+            width: 80%;
+            margin: 36px auto;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <h1>Hot Air Ballooning</h1>
+        <ul>
+        <a href="responsive2.html"><li>Responsive Grid</li>
+        </a>
+        </ul>
+    <img src="kenny-eliason-lJ6iASrFAnQ-unsplash.jpg" />
+    <p>Hot-air ballooning is a fascinating and historic form of aviation that dates back to the late 18th century. The first successful manned flight in a hot-air balloon was conducted by the Montgolfier brothers, Joseph-Michel and Jacques-Étienne, in 1783 in France. They used a balloon made of silk and paper, which was heated by a fire burning beneath the open neck of the balloon. This pioneering flight marked the beginning of human exploration of the skies and captured the imagination of people around the world. Over the years, hot-air ballooning evolved from a novel experiment to a popular recreational activity and even a competitive sport.</p>
+    <h2>Colophon</h2>
+    <p>This page uses a responsive design in which the max-width style restricts the page to 95% of the browser window width, down to device widths of 750px (e.g., iPhone 8 or equivalent Android), after which an @media query takes over to unfloat the image and make it full-width and enlarge the type and line leading for easier reading.</p>
+</body>
+</html>
