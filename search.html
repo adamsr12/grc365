@@ -117,6 +117,31 @@
         color: white;
     }
 </style>
+<script>
+document.getElementById('searchButton').addEventListener('click', function() {
+  performSearch();
+});
+
+// Allow user to press "Enter" to search
+document.getElementById('searchInput').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    performSearch();
+  }
+});
+
+function performSearch() {
+  const query = document.getElementById('searchInput').value;
+  const baseUrl = "https://adamsr12.github.io/grc365";
+  
+  if (query.trim() !== "") {
+    // Redirects to Google with the site-specific filter
+    const searchUrl = `https://www.google.com/search?q=site:${baseUrl}+${encodeURIComponent(query)}`;
+    window.open(searchUrl, '_blank');
+  } else {
+    alert("Please enter a search term.");
+  }
+}
+</script>
 </head>
 
 <body>
@@ -143,22 +168,6 @@
     <input type="text" id="searchBox" placeholder="Search this website...">
     <button id="searchButton">Search</button>
 </div>
-
-<script>
-document.getElementById("searchButton").addEventListener("click", searchSite);
-
-document.getElementById("searchBox").addEventListener("keypress", function(e){
-    if (e.key === "Enter") {
-        searchSite();
-    }
-});
-
-function searchSite() {
-    let query = document.getElementById("searchBox").value;
-    let url = "https://www.google.com/search?q=site:adamsr12.github.io/grc365 " + query;
-    window.open(url, "_blank");
-}
-</script>
     <h1>Hot Air Ballooning</h1>
     <p><img class="text-img" src="balloon-pilot.jpg" /><span class="drop-cap">H</span>ot-air ballooning is a fascinating and historic form of aviation that dates back to the late 18th century. The first successful manned flight in a hot-air balloon was conducted by the Montgolfier brothers, Joseph-Michel and Jacques-Étienne, in 1783 in France. They used a balloon made of silk and paper, which was heated by a fire burning beneath the open neck of the balloon. This pioneering flight marked the beginning of human exploration of the skies and captured the imagination of people around the world. Over the years, hot-air ballooning evolved from a novel experiment to a popular recreational activity and even a competitive sport.</p>
     <p>The basic principle behind hot-air ballooning is relatively simple yet ingenious. A hot-air balloon consists of three main components: the envelope (the balloon itself), the burner, and the basket (or gondola). The envelope is typically made of lightweight, heat-resistant materials like nylon or polyester. The burner, fueled by propane, heats the air inside the envelope. As the air inside the balloon becomes warmer, it expands and becomes less dense than the cooler air outside, creating lift. This lift allows the balloon to rise into the sky. To descend, the pilot can allow the air inside the envelope to cool or release hot air through a vent at the top of the balloon. Steering is achieved by ascending or descending to different altitudes where the wind direction varies.</p>
