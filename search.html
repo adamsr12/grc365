@@ -18,7 +18,7 @@ CSS, JavaScript, Web Design, Responsive Design, Flexbox, CSS Grid, Forms, Typogr
         background: whitesmoke;
     } #page {
         width: 1024px;
-        height: auto;
+        height: 1328px;
         background: white;
         border: 1px solid darkgray;
         box-shadow: 2px 3px 6px darkgray;
@@ -33,7 +33,7 @@ CSS, JavaScript, Web Design, Responsive Design, Flexbox, CSS Grid, Forms, Typogr
     } h1 {
         font: 48pt/1.4em 'Dancing Script';
         text-align: center;
-        margin: 24px 0 0 0;
+        margin: 36px 0 0 0;
         color: black;
         text-shadow: 2px 3px 6px orange;
     } p {
@@ -49,13 +49,13 @@ CSS, JavaScript, Web Design, Responsive Design, Flexbox, CSS Grid, Forms, Typogr
     } .drop-cap {
         font-size: 3em;
         float: left;
-        line-height: 1.0em;
-        margin: 0 0 -6px 0;
+        line-height: 0.95em;
+        margin: 0 4px -6px 0;
     } ul {
         width: 100%;
         margin-top: -2px;
         display: grid;
-        grid-template: repeat(3,auto)/repeat(6,auto);
+        grid-template: repeat(1,auto)/repeat(7,auto);
     } li {
         font: 14pt/2.0em 'Roboto Condensed';
         list-style: none;
@@ -108,7 +108,7 @@ CSS, JavaScript, Web Design, Responsive Design, Flexbox, CSS Grid, Forms, Typogr
     } .search-box {
         max-width: 460px;
     } input[type="text"] {
-        width: 320px;
+        width: 324px;
         padding: 12px;
         font-size: 16px;
         border: 1px solid #ccc;
@@ -137,9 +137,10 @@ CSS, JavaScript, Web Design, Responsive Design, Flexbox, CSS Grid, Forms, Typogr
 <body>
     <div id="page">
         <img id="banner" src="daniela.jpg" />
-        <ul>
+        <ul><a  style="grid-area: 1/4;" href="index.html">
             <li>Home</li>
-            
+            </a>
+            <!--
             <a href="video.html"><li>Video/Links Demo</li></a>
             <a href="flexbox.html"><li>Flexbox Demo</li></a>
             <a href="portfolio.html"><li>Portfolio Demo</li></a>
@@ -151,7 +152,8 @@ CSS, JavaScript, Web Design, Responsive Design, Flexbox, CSS Grid, Forms, Typogr
             <a href="animation-demo.html"><li>Animation Demo</li></a>
             <a href="javascript-demo.html"><li>JavaScript Demo</li></a>
             <a href="advanced-demo.html"><li>Advanced Demo</li></a>
-            <!-- <a href="#"><li></li></a> -->
+            <!-- <a href="#"><li></li></a>
+            -->
             
         </ul>
     <div id="search">
@@ -178,11 +180,10 @@ CSS, JavaScript, Web Design, Responsive Design, Flexbox, CSS Grid, Forms, Typogr
 
     </form>
     </div>
-    <h1>Hot Air Ballooning</h1>
-    <p><img class="text-img" src="balloon-pilot.jpg" /><span class="drop-cap">H</span>ot-air ballooning is a fascinating and historic form of aviation that dates back to the late 18th century. The first successful manned flight in a hot-air balloon was conducted by the Montgolfier brothers, Joseph-Michel and Jacques-Étienne, in 1783 in France. They used a balloon made of silk and paper, which was heated by a fire burning beneath the open neck of the balloon. This pioneering flight marked the beginning of human exploration of the skies and captured the imagination of people around the world. Over the years, hot-air ballooning evolved from a novel experiment to a popular recreational activity and even a competitive sport.</p>
-    <p>The basic principle behind hot-air ballooning is relatively simple yet ingenious. A hot-air balloon consists of three main components: the envelope (the balloon itself), the burner, and the basket (or gondola). The envelope is typically made of lightweight, heat-resistant materials like nylon or polyester. The burner, fueled by propane, heats the air inside the envelope. As the air inside the balloon becomes warmer, it expands and becomes less dense than the cooler air outside, creating lift. This lift allows the balloon to rise into the sky. To descend, the pilot can allow the air inside the envelope to cool or release hot air through a vent at the top of the balloon. Steering is achieved by ascending or descending to different altitudes where the wind direction varies.</p>
-    <h2>Colophon</h2>
-    <p style="margin-bottom: 72px;">This page includes two search fields. The first searches Google. The second searches this GRC 365 web site. However the GRC 365 search will not show any results until Google's web crawler database finds and indexes the site, a process that could be accelerated by implementing search engine optimization (SEO) with meta tags in the head, especially the description and keywords tags. The content of these tags was written by ChatGPT and added to the page.</p>
+    <h1>Home Page with Search Fields</h1>
+    <p><img class="text-img" src="balloon-pilot.jpg" /><span class="drop-cap">T</span>his page includes two search fields. The first searches the entire internet with Google. The second searches this GRC 365 web site with Google.</p>
+    <p>The GRC 365 search will not show any results until Google’s web crawler (database) finds and indexes the site, a process that could be accelerated by implementing search engine optimization (SEO) with meta tags in the head, especially the description and keywords tags.</p>
+    <p>Both the description and keywords meta tags were added by asking ChatGPT to write a one-paragraph description of the site and to make a list of 12 keywords.</p>
 </div>
 </body>
 </html>
