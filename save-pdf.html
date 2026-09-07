@@ -10,12 +10,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
     <style>
-        body {
+		@font-face {
+			font-family: Georgia;
+			src: url("Georgia.ttf");
+		} body {
 			background: whitesmoke;
 			font-family: Arial, sans-serif; padding: 20px;
 		} #page {
 			width: 5.5in;
-			height: 8.5in;
+			height: 8.75in;
 			background: white;
 			border: 1px solid gray;
 			margin: 0 auto;
@@ -26,7 +29,7 @@
 		} h3 {
 			font: bold 14pt/1.4em Roboto;
 			width: 4.5in;
-			margin: 12px auto 6px auto;
+			margin: 12px auto 3px auto;
 		} p {
 			width: 4.5in;
 			margin: 6px auto;
@@ -40,8 +43,21 @@
 			border-radius: 4px;
 			display: block;
 			margin: 24px auto;
+			font: bold 11pt/1.4em Roboto;
 		} button:hover {
 			background-color: #0056b3;
+		} form {
+			width: 300px;
+			height: auto;
+			background: yellow;
+			border: 1px solid gray;
+			padding: 12px;
+			margin: 6px auto;
+		} label {
+			font: 12pt/1.4em Roboto;
+		} input {
+			width: 95%;
+			font: 12pt/1.4em Georgia;
 		}
     </style>
 </head>
@@ -51,9 +67,16 @@
     <div id="page">
         <h1>HTML to PDF</h1>
     <h3>Section 1: Description</h3>
-		<p>The JavaScript library HTML to PDF enables you to add a button to your page that, when pressed, will download the page as a graphic PDF. Being a graphic, unfortunately the downloaded PDF is not searchable or editable.</p>
-		<p>Also the HTML page may not contain any images because these will cause the JavaScript library to crash. Thus the library is best suited to text-only documents, such as business or informational documents.</p>
-    <h3>Section 2: Conclusion</h3>
+		<p>The JavaScript library &ldquo;<a href="https://ekoopmans.github.io/html2pdf.js/">HTML 2 PDF</a>&rdquo; enables you to add a button to your page that, when pressed, will download the page as a graphic PDF. Being a graphic, unfortunately the downloaded PDF is not searchable or editable.</p>
+		<p>Also the HTML page may not contain any images, which will cause the JavaScript to crash. Thus the library is best suited to text-only documents, such as business or informational documents or, as in the example below, enabling readers to save form data.</p>
+    <h3>Section 2: Form</h3>
+		<form>
+			<input type="text"><br/>
+			<label>First Name</label><br/>
+			<input style="margin-top: 6px;" type="text"><br/>
+			<label>Last Name</label>
+		</form>
+    <h3>Section 3: Conclusion</h3>
 	    <p>By forcing the canvas scale elements or configuring page-break directives to avoid splitting, html2pdf safely binds all visible document data into one page.</p>
 		<p>To fit into one page, this sample document is sized to half-page or 5.5 inches wide.</p>
     </div>
