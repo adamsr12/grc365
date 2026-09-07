@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download HTML as PDF</title>
+ 	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+    <!-- Include html2pdf.js library via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        body {
+			background: whitesmoke;
+			font-family: Arial, sans-serif; padding: 20px;
+		} #page {
+			width: 5.5in;
+			height: 8.5in;
+			background: white;
+			border: 1px solid gray;
+			margin: 0 auto;
+		} h1 {
+			font: 36pt/1.4em 'Dancing Script';
+			text-align: center;
+			text-shadow: 2px 3px 6px lightblue;
+		} h3 {
+			font: bold 14pt/1.4em Roboto;
+			width: 4.5in;
+			margin: 12px auto 6px auto;
+		} p {
+			width: 4.5in;
+			margin: 6px auto;
+			font: 14pt/1.4em Georgia;
+		} button {
+			padding: 10px 20px;
+			background-color: #007bff;
+			color: white;
+			border: none;
+			cursor: pointer;
+			border-radius: 4px;
+			display: block;
+			margin: 24px auto;
+		} button:hover {
+			background-color: #0056b3;
+		}
+    </style>
+</head>
+<body>
+
+    <!-- The content section you want to download -->
+    <div id="page">
+        <h1>HTML to PDF</h1>
+    <h3>Section 1: Description</h3>
+		<p>The JavaScript library HTML to PDF enables you to add a button to your page that, when pressed, will download the page as a graphic PDF. Being a graphic, unfortunately the downloaded PDF is not searchable or editable.</p>
+		<p>Also the HTML page may not contain any images because these will cause the JavaScript library to crash. Thus the library is best suited to text-only documents, such as business or informational documents.</p>
+    <h3>Section 2: Conclusion</h3>
+	    <p>By forcing the canvas scale elements or configuring page-break directives to avoid splitting, html2pdf safely binds all visible document data into one page.</p>
+		<p>To fit into one page, this sample document is sized to half-page or 5.5 inches wide.</p>
+    </div>
+
+    <!-- Trigger Button -->
+    <button id="download-btn">Download Page as PDF</button>
+
+    <script>
+        document.getElementById('download-btn').addEventListener('click', () => {
+            // 1. Select the HTML element you want to capture
+            const element = document.getElementById('page');
+
+            // 2. Configure optional rendering settings
+            const options = {
+                margin: 1,
+                filename: 'document.pdf',
+                image: {
+					type: 'jpeg',
+					quality: 0.98 },
+                	html2canvas: {scale: 2},
+				// Higher scale means better quality/resolution
+                jsPDF: {
+					unit: 'in',
+					format: 'letter', orientation: 'portrait'
+				}
+            };
+
+            // 3. Execute the library process: from element -> apply config -> save as file
+            html2pdf().set(options).from(element).save();
+        });
+    </script>
+
+</body>
+</html>
