@@ -7,11 +7,15 @@
 <link rel="icon" type="image/svg+xml" href="favicon-f/favicon.svg" />
 <link rel="shortcut icon" href="favicon-f/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="favicon-f/apple-touch-icon.png" />
-<link rel="manifest" href="favicon-f/site.webmanifest" /><style>
-    @font-face {
-        font-family: Candara;
-        src: url("Candara.ttf");
-    } h1 {
+<link rel="manifest" href="favicon-f/site.webmanifest" />
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Contact Form</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    h1 {
         text-align: center;
         font-weight: normal;
     } form {
@@ -23,28 +27,34 @@
         border: 1px solid goldenrod;
         box-shadow: 2px 3px 6px goldenrod;
         border-radius: 18px;
-        font: 14pt/1.2em Candara;
-    } input {
-        margin-bottom: 6px;
-    } input[type=text] {
-        width: 100%;
-    } input[type=submit] {
-        width: 125px;
-        height: 40px;
-        margin: 24px auto 0 auto;
-        display: block;
-        background: lightgreen;
-        border-radius: 6px;
+        font: 14pt/1.2em 'Roboto Serif';
     } fieldset {
         margin-top: 18px;
     } #personal input, #submit {
         width: 100%;
         height: 24px;
         margin-bottom: 12px;
-    } p {
-        font: 14pt/1.4em Candara;
-        width: 600px;
-        margin: 8px auto;
+	} input[type="text"] {
+		width: 98%;
+		font: 12pt/1.4em Roboto;
+	} select {
+		width: 50%;
+		font: 12pt/1.4em Roboto;
+		padding: 4px 6px;
+	} textarea {
+		width: 98%;
+		font: 12pt/1.4em Roboto;
+	} input[type="submit"] {
+		width: 100px;
+		height: 40px;
+		background: lightgreen;
+		display: block;
+		margin: 0 auto;
+		border-radius: 12px;
+		border: 2px solid gray;
+		font: 400 12pt/1.4em Roboto;
+	} input[type="submit"]:hover {
+		box-shadow: 2px 3px 6px gray;
     } ul {
         width: 560px;
         height: 50px;
@@ -68,62 +78,58 @@
         background: rgba(169,225,245,0.80);
         transition: background 0.5s;
     }
-</style>
-<script language="JavaScript">
-    function toggle(source) {
-        checkboxes = document.getElementsByName('os');
-        for(var checkbox in checkboxes)
-        checkboxes[checkbox].checked = source.checked;
-    }
-</script>
+<</style>
 </head>
 
 <body>
     <form action="https://formsubmit.co/richard.adams@unlv.edu" method="post">
     <h1>Contact Us</h1>
-    <label for="fname">First name</label><br/>
-    <input type="text" id="fname" value="First name" /><br/>
-    <label for="lname">Last name</label><br/>
-    <input type="text" id="lname" value="Last name" /><br/>
+	<input type="text" name="first-name" /><br/>
+	<label>First name</label><br/>
+	<input type="text" name="last-name" /><br/>
+	<label>Last name</label><br/>
+	<input type="text" name="email" /><br/>
+	<label>Email</label><br/>
+	
+	<fieldset>	
+	<legend>Operating system (check one)</legend>
+	<input type="radio" name="os" /><label>Mac OS</label><br/>
+	<input type="radio" name="os" /><label>Windows</label><br/>
+	<input type="radio" name="os" /><label>UNIX</label><br/>
+	</fieldset>
 
-    <fieldset>
-    <legend>Reason for contacting us (check one)</legend>
-    <input type="radio" name="services" id="design" value="Design" />
-    <label for="design">Design services</label><br/>
-    <input type="radio" name="services" id="consulting" value="Design" />
-    <label for="consulting">Consulting</label><br/>
-    <input type="radio" name="services" id="UXD" value="User experience design" />
-    <label for="UXD">User experience design</label><br/>
-    <input type="radio" name="services" id="other" value="Other" />
-    <label for="UXD">Other</label>
-    </fieldset>
-        
-    <fieldset>
-    <legend>Operating system (check all that apply)</legend>
-    <input type="checkbox" name="os" id="all" value="" onClick="toggle(this)" />
-    <label for="all">Check/uncheck all</label><br/>
-    <input type="checkbox" name="os" id="macos" value="MacOS" />
-    <label for="macos">Macintosh</label><br/>
-    <input type="checkbox" name="os" id="windows" value="Windows" />
-    <label for="macos">Windows</label><br/>
-    <input type="checkbox" name="os" id="unix" value="UNIX" />
-    <label for="unix">UNIX</label>
-    </fieldset>
-    <fieldset>
-    <legend>Time frame</legend>
-    <select>
-        <option value="">When do you want to start working with us?</option>
-        <option value="month">This month</option>
-        <option value="quarter">This quarter</option>
-        <option value="year">This year</option> <option value="not sure">Not sure</option>
-    </select>
-    </fieldset>
-    <fieldset>
-    <legend>Message</legend>
-    <textarea rows="6" cols="70" value="message"></textarea>
-    </fieldset>
-    <input type="submit" value="Submit Form" />
+	<fieldset>
+	<legend>Services desired (check all that apply)</legend>
+	<input type="checkbox" onClick="toggle(this)" />
+	<label>Check/uncheck all</label><br/>
+	<input type="checkbox" name="sd"><label>Design</label><br/>
+	<input type="checkbox" name="sd"><label>UX/UI</label><br/>
+	<input type="checkbox" name="sd"><label>Consulting</label><br/>
+	</fieldset><br/>
+
+	<label>What is your timeframe?</label><br/>	
+	<select>
+		<option>ASAP</option>
+		<option>This week</option>
+		<option>This month</option>
+		<option>This year</option>
+		<option>Not sure</option>
+	</select>
+	<br/><br/>
+
+	<label>Comments</label><br/>	
+	<textarea>
+	</textarea><br/><br/>
+
+	<input type="submit" value="Submit" />
     </form>
+<script language="JavaScript">
+    function toggle(source) {
+        checkboxes = document.getElementsByName('sd');
+        for(var checkbox in checkboxes)
+        checkboxes[checkbox].checked = source.checked;
+    }
+</script>
     <p>Sample form built in class. You can see the code using your browser's Web Inspector.</p>
     <p>The checkbox section includes a 5-line JavaScript program connected to the "Check/uncheck all" box that checks or unchecks all the boxes.</p>
         <ul>
@@ -135,6 +141,9 @@
         </a>
         <a href="https://adamsr12.github.io/grc365/form-deepseek.html">
         <li>AI-built Form</li>
+        </a>
+        <a href="https://adamsr12.github.io/grc365/form-transparent.html">
+        <li>Design Idea</li>
         </a>
     </ul>
 
