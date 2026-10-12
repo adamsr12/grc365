@@ -2,36 +2,78 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Untitled Document</title>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>On Ballooning . . .</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merriweather:wght@400;700&display=swap');" rel="stylesheet">
 <style>
-	div {
-		width: 800px;
-		height: 500px;
-		background: url("hot-air-balloon.jpg");
+	@font-face {
+		font-family: Georgia;
+		src: url("Georgia.ttf");
+	} @font-face {
+		font-family: Candara;
+		src: url("Candara.ttf");
+	} body {
+		background: whitesmoke;
+	} #box {
+		width: 768px;
+		height: 512px;
 		margin: 24px auto;
-		background-size: 100%;
+		background: url("hot-air-balloon.jpg");
 		background-repeat: no-repeat;
+		background-size: 100%;
+		border-radius: 12px;
+		box-shadow: 2px 3px 6px gray;
+	} h1 {
+		font: 700 48pt/1.0em 'Dancing Script';
+		color: white;
+		text-align: center;
+		padding-top: 24px;
+		text-shadow: 1px 2px 3px red;
 	} p {
-		font: 16pt/0.9em Lora;
+		width: 550px;
+		padding-left: 24px;
+		font: 16pt/1em Merriweather;
 		color: white;
 		white-space: pre-wrap;
 		tab-size: 6;
-		padding: 24px 0 0 24px;
-	} h1 {
-		font: 36pt/1.4em 'Playfair Display';
+	} figcaption {
+		width: 800px;
+		margin: 0 auto;
+		font: italic 12pt/1.4em Georgia;
 		text-align: center;
-		color: white;
-		padding-top: 12px;
-		text-shadow: 2px 3px 6px rgba(150,25,0,1.00);
+    } ul {
+        width: 800px;
+        height: auto;
+        margin: 72px auto;
+		display: flex;
+		justify-content: center;
+    } li {
+        width: 175px;
+        height: 50px;
+		margin: 0 6px;
+        background: lightgray;
+        border-radius: 12px;
+        list-style: none;
+        font: 14pt/2.6em Candara;
+        text-align: center; 
+    } a {
+        color: black;
+        text-decoration: none;
+    } li:hover {
+        background: rgba(169,225,245,0.80);
+        transition: background 0.5s;
+	} aside {
+		width: 760px;
+		font: 14pt/1.4em Georgia, serif;
+		margin: 36px auto;
 	}
 </style>
 </head>
 
 <body>
-	<div>
-		<h1>On Ballooning . . . </h1>
-		<p>In the dawn's gentle embrace, we rise,<br/>
+<h1 style="color: black; text-shadow: none; padding-bottom: 24px;">Type Specimen</h1>
+<div id="box">
+<h1>On Ballooning . . . </h1>
+<p>In the dawn's gentle embrace, we rise,<br/>
 &Tab;A hot-air balloon in the painted skies.<br/>
 Colors dance in the morning light,<br/>
 &Tab;Floating softly, a graceful flight.<br/>
@@ -39,6 +81,19 @@ Whispers of wind guide our way,<br/>
 &Tab;Over fields where shadows play.<br/>
 Above the world, in silence we roam,<br/>
 &Tab;In the sky's vast expanse, we find our home.</p>
-	</div>
+</div>
+<figcaption>Photo by Bessi on Pixabay.</figcaption>
+<aside>This simple type specimen was made by placing the balloon image as the background of a &lt;div&gt;. Type was placed inside the div. The complementary fonts were chosen by ChatGPT, which suggested &ldquo;Dancing Script&rdquo; for &lt;h1&gt; and &ldquo;Merriweather&rdquo; for &lt;p&gt;. Alternate lines were indented using the case-sensitive &amp;Tab; character, which requires the styles &ldquo;white-space: pre-wrap;&rdquo; and &ldquo; and &ldquo;tab-size: 6;&rdquo; (where 6 is the number of characters to indent). Additional type effects are illustrated in the Effects Page linked below.</aside>
+<ul>
+<a href="https://adamsr12.github.io/grc365">
+<li>Home</li>
+</a>
+<a href="https://unlv.zoom.us/rec/share/t0qfXT3scyohsmNKvl4KMDaYjJeWMyz0e33SGsNbPThhdzxaJBI55Edj0SkjlceN.NWU3iBircWpP8XKh?pwd=DBpu9yo1r_9LlZjZJAAAIAAAABK67vbwCr_xr9f69L_oCcBFTdYDaAVtentzB0dYhTvqnQCYnm-8GSgWcgOSVm9xZTAwMDAwNA">
+<li>Zoom Link</li>
+</a>
+<a href="https://r3adams.github.io/grc-365-new/alice.html">
+<li>Effects Page</li>
+</a>
+</ul>
 </body>
 </html>
