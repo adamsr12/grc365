@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Video Page</title>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto:wght@400;500&family=Roboto+Condensed:wght@400;500&display=swap" rel="stylesheet">
 <style>
     * {
         margin: 0;
@@ -15,7 +15,7 @@
         background: whitesmoke;
     } #page {
         width: 1024px;
-        height: auto;
+        height: 1284px;
         background: white;
         border: 1px solid darkgray;
         box-shadow: 2px 3px 6px darkgray;
@@ -42,10 +42,10 @@
         width: 100%;
         margin-top: -4px;
     } li {
-        font: 14pt/2.0em Georgia;
+        font: 500 14pt/2.0em 'Roboto Condensed';
         list-style: none;
         float: left;
-        width: 33.33%;
+        width: 25%;
         height: 40px;
         text-align: center;
         background: rgba(169,225,245,0.80);
@@ -64,7 +64,7 @@
     } .arrow {
         width: 75px;
         height: 75px;
-        margin: 24px 0 0 24px;
+		margin-left: 3px;
     } .arrow:hover {
         background: lightgreen;
         transition: background 0.5s;
@@ -72,50 +72,27 @@
         margin: 54px auto 36px auto;
         display: block;
         box-shadow: 2px 3px 6px dimgray;
-    } .icon {
-        width: 84px;
-        height: 84px;
-        border: none;
-        box-shadow: none;
-        margin-right: 96px;
-    } .icon:hover {
-        background: lightgreen;
-        transition: background 0.5s;
+	} figure {
+		width: 85px;
+		margin: 0 0 0 125px;
+	} figcaption {
+		font: 12pt/1.4em Georgia, serif;
     } table {
-        font: 12pt/1.4em Roboto;
         border-collapse: collapse;
-        margin: 24px auto;
-    } tr:nth-child(2) {
-        font-style: italic;
-    } tr:nth-child(odd) {
-        background: gainsboro;
-    } td, th {
-        padding: 3px 6px;
-    } tr:nth-child(1) {
-        background: lightblue;
-    } table p {
-        margin: -10px 0 0 0;
-        font: italic 12pt/1.4em Georgia;
-        width: 512px;
-        padding-right: 64px;
-    } h2 {
-        font: bold 18pt/1.4em Georgia, serif;
-        text-align: center;
-    } pre {
-        font: 12pt/1.0em monospace;
         width: 768px;
-        margin: 6px auto;
-    } #icons {
-        width: 860px;
         margin: 48px auto;
-        display: flex;
-        justify-content: space-between;
-    } figure {
-        width: 96px;
-    } figcaption {
-        font: 12pt/1.8em Georgia;
-        text-align: center;
-    }
+        font: 13pt/1.4em Georgia;
+        border: 1px solid darkgray;
+        box-shadow: 2px 3px 6px darkgray;
+    } td, th {
+        padding: 3px 12px;
+    } tr:nth-child(2) td:nth-child(1n+1) {
+        font-style: italic;
+    } tr:nth-child(1) {
+        background: gainsboro;
+    } tr:nth-child(2n+3) {
+        background: whitesmoke;
+	}
 </style>
 </head>
 
@@ -125,31 +102,36 @@
         <ul>
             <!-- Local or Relative Link -->
             <a href="index.html"><li>Home</li></a>
-            <a href="video.html">
-            <li>Video Page</li></a>
-            <li>Balloon Federation of America</li>
+            <li>Video Page</li>
+            <a href="how-to-video.html">
+            <li>How-to Page</li></a>
+            <a href="video2.html">
+            <li>Links Page</li></a>
         </ul>
 
         <h1>Balloon Federation of America</h1>
         <p><img class="float-left" src="bausenhart.jpeg" />
             <i>This tutorial showed how to place a video in a web page and how to create four types of links (relative/local, absolute/global, anchor, and email).</i><br/><br/>
             <!-- Absolute or Global Link -->
-            The <a href="https://bfa.net" target="_blank"><b>Balloon Federation of America</b></a> is a 501(c)3 non-profit association dedicated to the advancement of the sport and science of lighter-than-air aviation, both hot air and gas balloons. Founded in 1961, membership in the BFA is open to anyone who shares a fascination with Lighter Than Air flight.</p>
+            The <a href="https://bfa.net" target="_blank"><b>Balloon Federation of America</b></a> [absolute or global link to another site] is a 501(c)3 non-profit association dedicated to the advancement of the sport and science of lighter-than-air aviation, both hot air and gas balloons. Founded in 1961, membership in the BFA is open to anyone who shares a fascination with Lighter Than Air flight.</p>
             <!-- Email link -->
-            <a href="mailto:info@bfa.net?subject=Web Site Inquiry"><p>Email the BFA</p></a>
-        <video width="640" height="360" controls poster="poster-natgeo-balloons.jpg">
-            <source src="natgeo-balloons.mp4">
-        </video>
-    <div id="icons">
+            <p><a href="mailto:info@bfa.net?subject=Web Site Inquiry">Email the BFA</a> [email link]</p>
+		    <table>
+            <tr><th colspan="3">Types of Links</th></tr>
+            <tr><td>Link</td><td>Definition</td><td>Format</td></tr>
+            <tr><td>Local or Relative Link</td><td>Link on your server</td><td>a href="filename.html"</td></tr>
+            <tr><td>Global or Absolute Link</td><td>Link to another site</td><td>a href="http://www.unlv.edu"</td></tr>
+            <tr><td>Email link</td><td>Link to send email</td><td>a href="mailto:info@unlv.edu"</td></tr>
+            <tr><td>Anchor Link</td><td>Link to an ID on the page</td><td>a href="#top-of-page"</td></tr>
+            <tr><td colspan="3">Add target="_blank" to open the link in new tab.</td></tr>
+        </table>
+
+		<figure>
         <a href="#banner">
         <img class="arrow" id="arrow" src="arrow.png" />
-        </a>
-        <figure>
-        <a href="how-to-video.html" target="_blank">
-        <img class="icon" src="i-icon.png" /></a>
-        <figcaption>How-to Page</figcaption>
+		</a>
+		<figcaption>Anchor link</figcaption>
         </figure>
         </div>        
-    </div>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Video Page      </title>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto:wght@400;500&family=Roboto+Condensed:wght@400;500&display=swap" rel="stylesheet">
 <style>
     * {
         margin: 0;
@@ -45,10 +45,10 @@
         width: 100%;
         margin-top: -4px;
     } li {
-        font: 14pt/2.0em Georgia;
+        font: 500 14pt/2.0em 'Roboto Condensed';
         list-style: none;
         float: left;
-        width: 33.33%;
+        width: 25%;
         height: 40px;
         text-align: center;
         background: rgba(169,225,245,0.80);
@@ -95,7 +95,11 @@
     } figcaption {
         font: 12pt/1.8em Georgia;
         text-align: center;
-    }
+    } video {
+        margin: 54px auto 36px auto;
+        display: block;
+        box-shadow: 2px 3px 6px dimgray;
+	}
 </style>
 </head>
 
@@ -106,18 +110,18 @@
             <!-- Local or Relative Link -->
             <a href="index.html"><li>Home</li></a>
             <li>Video Page</li>
+            <a href="how-to-video.html">
+            <li>How-to Page</li></a>
             <a href="video2.html">
-            <li>Balloon Federation of America</li></a>
+            <li>Links Page</li></a>
         </ul>
         <h1>Hot Air Ballooning</h1>
         <p><img class="float-left" src="andre.jpg" />
             According to Wikipedia, the first balloon flight carrying passengers was by brothers Joseph-Michel and Jacques-Etienne Montgolfier in Annonay, France, in 1873. Since then many have enjoyed sightseeing from the quiet, nearly wind-free heights afforded by hot air ballooning. (Banner photo by Daniela Cuevas and small photo by Andre Frueh, both on Unsplash.)</p>
+        <video width="640" height="360" controls poster="poster-natgeo-balloons.jpg">
+            <source src="natgeo-balloons.mp4">
+        </video>
     <div id="icons">
-        <figure>
-        <a href="how-to-video.html" target="_blank">
-        <img class="icon" src="i-icon.png" /></a>
-        <figcaption>How-to Page</figcaption>
-        </figure>
         <figure>
         <a href="https://unlv.zoom.us/rec/share/jzbR8mZiwb3vLHONrqCq2-yLwdSivjLtQEdh2OoFv2q3tKnpqtBYl7dxo9TeFUFY.NhbQRCb7Tb4gDdc2?pwd=DP13tFtP9X6klJ1QkAAAIAAAAHI1Wk5y6hN17b-5XCeyZZYvFs64nAXwiclDdJTnClyEsJl2DUFlHYSNSRwAFLve9zAwMDAwNA" target="_blank">
         <img class="icon" src="icon-video.png" /></a>
