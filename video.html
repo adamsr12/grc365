@@ -12,7 +12,7 @@
         background: whitesmoke;
     } #page {
         width: 1024px;
-        height: 1525px;
+        height: 1624px;
         background: white;
         border: 1px solid darkgray;
         box-shadow: 2px 3px 6px darkgray;
@@ -30,11 +30,19 @@
         margin: 54px 0 0 0;
         color: brown;
         text-shadow: 2px 3px 6px darkgray;
+    } h2 {
+        font: bold 18pt/1.4em Georgia, serif;
+        text-align: center;
+        margin: 0 0 24px 0;
+    } pre {
+        font: 13pt/1.2em monospace;
+        width: 768px;
+        margin: 6px auto;
     } p {
         font: 14pt/1.4em Georgia;
         width: 768px;
         margin: 24px auto;
-        padding-bottom: 175px;
+        padding-bottom: 96px;
     } img.float-left {
         width: 300px;
         float: left;
@@ -48,7 +56,7 @@
         font: 500 14pt/2.0em 'Roboto Condensed';
         list-style: none;
         float: left;
-        width: 25%;
+        width: 33.33%;
         height: 40px;
         text-align: center;
         background: rgba(169,225,245,0.80);
@@ -110,14 +118,17 @@
             <!-- Local or Relative Link -->
             <a href="index.html"><li>Home</li></a>
             <li>Video Page</li>
-            <a href="how-to-video.html">
-            <li>How-to Page</li></a>
             <a href="video2.html">
             <li>Links Page</li></a>
         </ul>
         <h1>Hot Air Ballooning</h1>
         <p><img class="float-left" src="andre.jpg" />
-            According to Wikipedia, the first balloon flight carrying passengers was by brothers Joseph-Michel and Jacques-Etienne Montgolfier in Annonay, France, in 1873. Since then many have enjoyed sightseeing from the quiet, nearly wind-free heights afforded by hot air ballooning. (Banner photo by Daniela Cuevas and small photo by Andre Frueh, both on Unsplash.)</p>
+        According to Wikipedia, the first balloon flight carrying passengers was by brothers Joseph-Michel and Jacques-Etienne Montgolfier in Annonay, France, in 1873. Since then many have enjoyed sightseeing from the quiet, nearly wind-free heights afforded by hot air ballooning. (Banner photo by Daniela Cuevas and small photo by Andre Frueh, both on Unsplash.)</p>
+		<h2>Code for Video</h2>
+        <pre>&lt;video width="640" height="360" controls poster="poster-natgeo-balloons.jpg"&gt;</pre>
+        <pre>&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="natgeo-balloons.mp4"&gt;</pre>
+        <pre>&lt;/video&gt;</pre>
+
         <video width="640" height="360" controls poster="poster-natgeo-balloons.jpg">
             <source src="natgeo-balloons.mp4">
         </video>
