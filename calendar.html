@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monthly Calendar</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+rel="stylesheet">
+
+<!-- HTML2PDF JavaScript Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<style>
+
+/* General page styling */
+body {
+    background-color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+#container {
+    width: 900px;
+    max-width: 95%;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid gray;
+    box-shadow: 3px 3px 8px gray;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #263b59;
+}
+
+/* Dropdown controls */
+#controls {
+    text-align: center;
+    margin: 25px 0;
+}
+
+select, button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #263b59;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #496b96;
+}
+
+/* Calendar heading */
+#calendarTitle {
+    text-align: center;
+    font-size: 28px;
+    color: #263b59;
+    margin: 20px 0;
+}
+
+/* Calendar grid */
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+/* Days of the week */
+.weekday {
+    background-color: #263b59;
+    color: white;
+    text-align: center;
+    padding: 12px 2px;
+    font-weight: bold;
+}
+
+/* Individual day rectangles */
+.day {
+    height: 90px;
+    border: 1px solid #999;
+    background-color: #f4f7fa;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Empty calendar spaces */
+.empty {
+    height: 90px;
+    border: 1px solid #ddd;
+    background-color: white;
+}
+
+/* Today's date is not specially highlighted;
+   calendar dates are generated for the selected month. */
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    #container {
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+        border: none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="container">
+
+    <h1>Monthly Calendar</h1>
+
+    <!-- Selection menus -->
+    <div id="controls">
+
+        <label for="month">Month:</label>
+
+        <select id="month">
+            <option value="0">January</option>
+            <option value="1">February</option>
+            <option value="2">March</option>
+            <option value="3">April</option>
+            <option value="4">May</option>
+            <option value="5">June</option>
+            <option value="6">July</option>
+            <option value="7">August</option>
+            <option value="8">September</option>
+            <option value="9">October</option>
+            <option value="10">November</option>
+            <option value="11">December</option>
+        </select>
+
+        <label for="year">Year:</label>
+
+        <select id="year">
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+        </select>
+
+        <button onclick="generateCalendar()">
+            Display Calendar
+        </button>
+
+    </div>
+
+    <!-- Calendar PDF output area -->
+    <div id="calendarArea">
+
+        <h2 id="calendarTitle"></h2>
+
+        <div id="calendar"></div>
+
+    </div>
+
+    <div style="text-align:center; margin-top:25px;">
+
+        <button onclick="savePDF()">
+            Save Calendar as PDF
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+// Generate the calendar
+
+function generateCalendar() {
+
+    const month = parseInt(
+        document.getElementById("month").value
+    );
+
+    const year = parseInt(
+        document.getElementById("year").value
+    );
+
+    const calendar = document.getElementById("calendar");
+
+    const title = document.getElementById("calendarTitle");
+
+    // Clear the previous calendar
+    calendar.innerHTML = "";
+
+    // Display month and year
+    const monthNames = [
+        "January", "February", "March",
+        "April", "May", "June",
+        "July", "August", "September",
+        "October", "November", "December"
+    ];
+
+    title.textContent = monthNames[month] + " " + year;
+
+    // Weekday headings
+    const weekdays = [
+        "Sunday", "Monday", "Tuesday",
+        "Wednesday", "Thursday",
+        "Friday", "Saturday"
+    ];
+
+    weekdays.forEach(function(day) {
+
+        const cell = document.createElement("div");
+
+        cell.className = "weekday";
+
+        cell.textContent = day;
+
+        calendar.appendChild(cell);
+
+    });
+
+    // Find the first day of the month
+    const firstDay = new Date(year, month, 1).getDay();
+
+    // Find the number of days in the month
+    const daysInMonth = new Date(
+        year, month + 1, 0
+    ).getDate();
+
+    // Add empty rectangles before the first day
+    for (let i = 0; i < firstDay; i++) {
+
+        const emptyCell = document.createElement("div");
+
+        emptyCell.className = "empty";
+
+        calendar.appendChild(emptyCell);
+
+    }
+
+    // Create a rectangle for each day
+    for (let day = 1; day <= daysInMonth; day++) {
+
+        const cell = document.createElement("div");
+
+        cell.className = "day";
+
+        cell.textContent = day;
+
+        calendar.appendChild(cell);
+
+    }
+
+}
+
+// Save calendar as PDF
+
+function savePDF() {
+
+    const element = document.getElementById("calendarArea");
+
+    const title = document.getElementById("calendarTitle").textContent;
+
+    const options = {
+
+        margin: 0.4,
+
+        filename: title.replace(" ", "_") + ".pdf",
+
+        image: {
+            type: "jpeg",
+            quality: 0.98
+        },
+
+        html2canvas: {
+            scale: 2
+        },
+
+        jsPDF: {
+            unit: "in",
+            format: "letter",
+            orientation: "landscape"
+        }
+
+    };
+
+    html2pdf().set(options).from(element).save();
+
+}
+
+// Display the current month when the page opens
+
+const today = new Date();
+
+document.getElementById("month").value = today.getMonth();
+
+document.getElementById("year").value =
+    today.getFullYear() >= 2026 &&
+    today.getFullYear() <= 2028
+    ? today.getFullYear()
+    : 2026;
+
+generateCalendar();
+
+</script>
+
+</body>
+</html>
