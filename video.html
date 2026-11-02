@@ -42,7 +42,7 @@
         font: 14pt/1.4em Georgia;
         width: 768px;
         margin: 24px auto;
-        padding-bottom: 96px;
+        padding-bottom: 18px;
     } img.float-left {
         width: 300px;
         float: left;
@@ -79,15 +79,17 @@
         text-align: center;
         margin: 6px auto;
     } #icons {
-        width: 860px;
+        width: 360px;
         margin: 72px auto;
         display: flex;
         justify-content: center;
     } .icon {
         width: 84px;
-        height: 84px;
+        height: auto;
         border: none;
         box-shadow: none;
+		display: block;
+		margin: 0 auto;
     } .icon:hover {
         background: lightgreen;
         transition: background 0.5s;
@@ -99,7 +101,7 @@
         background: lightgreen;
         transition: background 0.5s;
     } figure {
-        width: 96px;
+        width: 124px;
     } figcaption {
         font: 12pt/1.8em Georgia;
         text-align: center;
@@ -123,7 +125,8 @@
         </ul>
         <h1>Hot Air Ballooning</h1>
         <p><img class="float-left" src="andre.jpg" />
-        According to Wikipedia, the first balloon flight carrying passengers was by brothers Joseph-Michel and Jacques-Etienne Montgolfier in Annonay, France, in 1873. Since then many have enjoyed sightseeing from the quiet, nearly wind-free heights afforded by hot air ballooning. (Banner photo by Daniela Cuevas and small photo by Andre Frueh, both on Unsplash.)</p>
+        According to Wikipedia, the first balloon flight carrying passengers was by brothers Joseph-Michel and Jacques-Etienne Montgolfier in Annonay, France, in 1873. Since then many have enjoyed sightseeing from the quiet, nearly wind-free heights afforded by hot air ballooning. (Banner photo by Daniela Cuevas and small photo by Andre Frueh, both on Unsplash.)<br/><br/>
+		Linked below is a 5-min. YouTube video by Mary Anne Buerano, GCM '21, on editing videos in Apple iMovie and Adobe Premiere.</p>
 		<h2>Code for Video</h2>
         <pre>&lt;video width="640" height="360" controls poster="poster-natgeo-balloons.jpg"&gt;</pre>
         <pre>&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="natgeo-balloons.mp4"&gt;</pre>
@@ -133,6 +136,10 @@
             <source src="natgeo-balloons.mp4">
         </video>
     <div id="icons">
+		<figure>
+			<img style="margin-top: 12px;" class="icon" src="thumb-youtube-video.jpg" />
+			<figcaption>YouTube Video</figcaption>
+		</figure>
         <figure>
         <a href="https://unlv.zoom.us/rec/share/jzbR8mZiwb3vLHONrqCq2-yLwdSivjLtQEdh2OoFv2q3tKnpqtBYl7dxo9TeFUFY.NhbQRCb7Tb4gDdc2?pwd=DP13tFtP9X6klJ1QkAAAIAAAAHI1Wk5y6hN17b-5XCeyZZYvFs64nAXwiclDdJTnClyEsJl2DUFlHYSNSRwAFLve9zAwMDAwNA" target="_blank">
         <img class="icon" src="icon-video.png" /></a>
