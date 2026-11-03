@@ -33,6 +33,10 @@
         font: 14pt/1.4em Georgia;
         width: 768px;
         margin: 12px auto;
+    } figcaption {
+        font: italic 13pt/1.4em Georgia;
+        width: 60ch;
+        margin: 0 auto 24px auto;
     } a {
         color: black;
         text-decoration: none;
@@ -55,19 +59,47 @@
         transition: background 0.5s;
     } span {
         font: 14pt/1.4em monospace;
-    } table {
+    } #table1 {
         font: 14pt/1.4 Candara;
         border: 1px solid gray;
-        margin: 48px auto;
+        margin: 48px auto 24px auto;
         box-shadow: 2px 3px 6px gray;
         border-collapse: collapse;
         background: url("daisy.jpg");
-    } td, th {
+    } #table1 td, #table1 th {
         padding: 6px 12px;
-    } tr:nth-child(2n+3) {
+    } #table1 tr:nth-child(2n+3) {
         background: rgba(255,255,255,0.30);
-    } tr:nth-child(1) {
+    } #table1 tr:nth-child(1) {
         background: lightblue;
+    } #table2 {
+		margin: 48px auto 24px auto;
+        // font: 14pt/1.4em Georgia;
+	} #table3 {
+        border-collapse: collapse;
+	    border: 2px solid rgb(23,38,173);
+        margin: 50px auto 24px auto;
+        background: url("DSC0067_1004_ghost.jpg");
+        background-size: 100%;
+		font: 14pt/1.4em Georgia;
+    } #table3 td {
+	    padding: 10px;
+    } #table3 th {
+	    padding: 10px;
+	    background: rgba(34,58,168);
+	    font-size: 24px;
+	    color: white;
+    } #table3 tr:nth-child(odd) {
+	    background: rgba(255,255,255,0.25);
+    } #table3 tr:nth-child(even) {
+	    background: rgba(255,255,255,0.45);
+    } #table3 td:nth-child(even) {
+	    border-left: 2px solid rgb(23,38,173);
+    } #table3 td:last-child {
+	    border-left: 2px solid rgb(23,38,173);
+    } #table3 #first_row {
+	    font-style: italic;
+	    background: rgba(255,255,255,0.50);
     }
 </style>
 </head>
@@ -83,7 +115,7 @@
     <p style="margin-top: 36px;">For the tables demo, we built the simple table below using the tags &lt;table&gt;, &lt;tr&gt; (table row), &lt;td&gt; (table data, i.e., cell), and &lt;th&gt; (table header, similar to td but bold and centered).</p>
     <p>We then styled the table by adding a border, drop shadow, and background to the table, vertical and horizontal padding to the cells (td), and using the nth-child selectors to color the odd rows transparent white to differentiate the rows.</p>
     <p>To bring information in to the table, you can create (or ask the customer for) the table in Excel, export to .txt or .csv format, and import into Dreamweaver using the File &gt; Import &gt; Tabular data setting.</p>
-    <table>
+    <table id="table1">
          <tr>
             <th colspan="3">Table of Rows and Columns</th>   
         </tr>
@@ -107,6 +139,74 @@
             <td>Row 5, Column 1</td>         <td>Row 5, Column 2</td>         <td>Row 5, Column 3</td>         
         </tr>
     </table>
+	<figcaption>The table above features an image background and alternate row shading with the nth-child selector to improve legibility.</figcaption>
+
+	<table id="table2" border="1">
+	  <tr>
+		<th>Column 1</th>
+		<th>Column 2</th>
+		<th>Column 3</th>
+	  </tr>
+	  <tr>
+		<td>Row 1, Column 1</td>
+		<td>Row 1, Column 2</td>
+		<td>Row 1, Column 3</td>
+	  </tr>
+	  <tr>
+		<td>Row 2, Column 1</td>
+		<td>Row 2, Column 2</td>
+		<td>Row 2, Column 3</td>
+	  </tr>
+	  <tr>
+		<td>Row 3, Column 1</td>
+		<td>Row 3, Column 2</td>
+		<td>Row 3, Column 3</td>
+	  </tr>
+	  <tr>
+		<td>Row 4, Column 1</td>
+		<td>Row 4, Column 2</td>
+		<td>Row 4, Column 3</td>
+	  </tr>
+	  <tr>
+		<td>Row 5, Column 1</td>
+		<td>Row 5, Column 2</td>
+		<td>Row 5, Column 3</td>
+	  </tr>
+	  <tr>
+		<td>Row 6, Column 1</td>
+		<td>Row 6, Column 2</td>
+		<td>Row 6, Column 3</td>
+	  </tr>
+	</table>
+<figcaption>Default, difficult-to-read table appearance, with double-lined borders, Times Roman font, and crowded spacing around text.</figcaption>
+
+<table id="table3">
+    <tr>
+        <th colspan="3">Russian Fairytale Boxes</th>
+    </tr>
+    <tr id="first_row">
+        <td>Box Theme</td>
+        <td>Characters Depicted</td><td>English Counterpart</td>
+    </tr>
+    <tr><td>The Grey Wolf</td><td>Ivan Tsarevitch, Helen the Beautiful, the Grey Wolf</td><td>none</td></tr>
+    <tr>
+        <td>The Horse with the Golden Mane</td>
+        <td>Ivan Tsarevitch and the Horse with the Golden Mane</td>
+        <td>The Magic Pony</td>
+    </tr>
+    <tr>
+        <td>The Firebird</td>
+        <td>Ivan Tsarevitch and the Firebird</td>
+        <td>The Phoenix</td>
+    </tr>
+    <tr>
+        <td>Father Frost</td>
+        <td>Father Frost, the Snow Queen, and a troika of horses</td>
+        <td>Santa Claus</td>
+    </tr>
+</table>
+<figcaption style="margin-bottom: 72px;">This table features a complex, ghosted-back image background and even rows lightened with transparent white (rgba, where &ldquo;a&rdquo; is alpha). The table lists Russian fairytale characters, commonly illustrated on lacquer boxes.</figcaption>
+	
     <a href="https://unlv.zoom.us/rec/share/TF9Mh03EbFmQ7Dv9gyk46y-IrQZivEka63z75xR4Q-mzPjrW4lrRXlby3T4NZKam.xf_QJs_eCfe6UznS?pwd=DP3EcLX9o0FkbVqKJwAAIAAAAAN0M9RAgTxT-ObFj-AkhFonKwKtNutWxKfHaOOBvCSL6sKJbVJJJ8qBPbqwJjZdGzAwMDAwNA" target="_blank">
     <img class="icon" src="icon-video.png" />
     </a>
