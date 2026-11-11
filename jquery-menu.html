@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&family=Merriweather&display=swap" rel="stylesheet">
+<!-- Include jQuery via CDN -->
+<script
+   src="https://code.jquery.com/jquery-4.0.0.min.js"
+   integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+   crossorigin="anonymous"></script>
+<script>
+$(document).ready(function() {
+  // Target the parent menu-item
+  $('.menu-item').hover(
+    function() {
+      // Find the specific nested dropdown and animate it down
+      $(this).find('.dropdown').stop(true, true).slideDown(300);
+    }, 
+    function() {
+      // Hide the specific nested dropdown when mouse leaves
+      $(this).find('.dropdown').stop(true, true).slideUp(300);
+    }
+  );
+});	
+</script>
+<style>
+h1 {
+	font: 48pt/1.4em Satisfy;
+	text-align: center;
+	text-shadow: 2px 2px 4px steelblue;
+}
+	
+p {
+	font: 14pt/1.6em Merriweather;
+	width: 512px;
+	margin: 36px auto;
+}
+/* Basic reset and horizontal layout for navbar */
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: steelblue;
+  display: flex;
+  font: 500 13pt/1.4em Roboto, sans-serif;
+  text-align: center;
+}
+
+.menu-item {
+  width: 135px;
+  position: relative; /* Context for absolute positioning of dropdown */
+}
+
+.menu-item a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu-item a:hover {
+  background-color: lightblue;
+}
+
+/* Hide the dropdown menu by default */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%; /* Positions it directly below the parent item */
+  left: 0;
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1; /* Ensures it stays on top of page content */
+}
+
+/* Style the links inside the dropdown */
+.dropdown li a {
+  color: #333;
+  padding: 10px 15px;
+}
+
+.dropdown li a:hover {
+  background-color: whitesmoke;
+}
+</style>
+</head>
+<body>
+<h1>jQuery Dropdown Menu</h1>
+<nav class="navbar">
+  <ul class="nav-menu">
+    <li class="menu-item">
+      <a href="#">Products ▼</a>
+      <!-- This is the drop-down menu -->
+      <ul class="dropdown">
+        <li><a href="#">Web Development</a></li>
+        <li><a href="#">Mobile Apps</a></li>
+        <li><a href="#">UI/UX Design</a></li>
+      </ul>
+    </li>
+    <li class="menu-item"><a href="#">About</a></li>
+    <li class="menu-item"><a href="#">Contact</a></li>
+  </ul>
+</nav>
+<p>The dropdown menu under &ldquo;Products&rdquo; was written by ChatGPT, which understands both jQuery and JavaScript.</p>
+</body>
+</html>
