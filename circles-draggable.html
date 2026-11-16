@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Drag Circles</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap" rel="stylesheet">	
+	
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- jQuery UI -->
+<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+#small1, #small2, #small3 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    cursor: grab;
+}
+
+#small1 {
+    background: red;
+    top: 100px;
+    left: 100px;
+}
+
+#small2 {
+    background: blue;
+    top: 180px;
+    left: 100px;
+}
+
+#small3 {
+    background: green;
+    top: 260px;
+    left: 100px;
+}
+
+#bigCircle {
+    width: 250px;
+    height: 250px;
+    border: 5px solid black;
+    border-radius: 50%;
+    position: relative;
+	margin: 36px auto;
+    background: white;
+	z-index: -1;
+}
+
+p {
+	font: 13pt/1.5em Merriweather, serif;
+	text-align: left;
+	width: 60ch;
+	margin: 36px auto 0 auto;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Drag the Small Circles into the Large Circle</h2>
+
+<div id="small1"></div>
+<div id="small2"></div>
+<div id="small3"></div>
+
+<div id="bigCircle"></div>
+<p>ChatGPT Prompt: Write a jQuery JavaScript function for an HTML page with two small circles and a larger circle, so that when the user drags a small circle into the big circle, it goes in and stays there.</p>
+
+<script>
+$(document).ready(function() {
+
+    // Make the small circles draggable
+    $("#small1, #small2, #small3").draggable({
+        revert: "invalid",
+        containment: "window"
+    });
+
+    // Make the large circle a drop target
+    $("#bigCircle").droppable({
+
+        accept: "#small1, #small2, #small3",
+
+        drop: function(event, ui) {
+
+            // Move the small circle into the big circle
+            $(ui.draggable).appendTo("#bigCircle");
+
+            // Position it inside the large circle
+            $(ui.draggable).css({
+                position: "absolute",
+                top: Math.random() * 150 + 40,
+                left: Math.random() * 150 + 40
+            });
+
+            // Stop dragging after it has been dropped
+            $(ui.draggable).draggable("disable");
+
+        }
+    });
+
+});
+</script>
+
+</body>
+</html>
